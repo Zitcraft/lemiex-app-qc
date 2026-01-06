@@ -1,0 +1,669 @@
+2025-12-30 01:48:54,840 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 01:48:54,841 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 01:48:55,856 - __main__ - INFO - Desktop app launched with PID: 507912
+2025-12-30 01:48:56,379 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 01:48:56] "GET /index.html HTTP/1.1" 200 22438 0.001256
+2025-12-30 01:48:56,388 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 01:48:56] "GET /eel.js HTTP/1.1" 200 6275 0.000345
+2025-12-30 01:48:56,408 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 01:48:56] "GET /css/style.css HTTP/1.1" 200 6113 0.017737
+2025-12-30 01:48:56,411 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 01:48:56] "GET /js/app.js HTTP/1.1" 200 24855 0.000646
+2025-12-30 01:48:58,189 - __main__ - INFO - Auto-starting camera...
+2025-12-30 01:48:58,190 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 01:49:00,724 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 01:49:00,724 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 01:49:00,725 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 01:49:00,725 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 01:49:00,746 - __main__ - INFO - No USB scanner detected
+2025-12-30 01:49:01,122 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 01:49:01,135 - __main__ - INFO - Device states synced with frontend
+2025-12-30 01:49:01,141 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 01:49:01] "GET /favicon.ico HTTP/1.1" 404 882 0.003526
+2025-12-30 01:49:02,696 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 01:49:05,596 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 01:49:08,359 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 01:49:08,360 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 01:49:08,529 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_014908.avi at (1280, 720)
+2025-12-30 01:49:08,530 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_014908.avi
+2025-12-30 01:49:08,530 - __main__ - INFO - Recording started for order: RecordingSession(id='61119938-ef05-47bc-b069-782f456ff8d5', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 8, 530027), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_014908.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:49:20,609 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 01:49:20,626 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 01:49:20,629 - services.recording_service - INFO - Recording stopped: 18, duration: 12.1s
+2025-12-30 01:49:20,631 - __main__ - INFO - Recording stopped: RecordingSession(id='61119938-ef05-47bc-b069-782f456ff8d5', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 8, 530027), end_time=datetime.datetime(2025, 12, 30, 1, 49, 20, 629795), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_014908.avi'), file_size=0, duration_seconds=12.099768, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:49:23,996 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 01:49:48,181 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 01:49:48,182 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 01:49:48,205 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_014948.avi at (1280, 720)
+2025-12-30 01:49:48,206 - services.recording_service - INFO - Recording started: 17 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_014948.avi
+2025-12-30 01:49:48,207 - __main__ - INFO - Recording started for order: RecordingSession(id='40fd9475-0402-4ab5-970b-db63e3c8d923', order_id='17', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 48, 206502), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_014948.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:49:48,210 - __main__ - ERROR - Fetch design preview error: Invalid URL 'null': No scheme supplied. Perhaps you meant https://null?
+2025-12-30 01:49:52,261 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 01:49:52,262 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 01:49:52,263 - services.recording_service - INFO - New order, switching from 17 to 18
+2025-12-30 01:49:52,265 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 01:49:52,266 - services.recording_service - INFO - Recording stopped: 17, duration: 4.1s
+2025-12-30 01:49:52,266 - __main__ - INFO - Recording stopped: RecordingSession(id='40fd9475-0402-4ab5-970b-db63e3c8d923', order_id='17', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 48, 206502), end_time=datetime.datetime(2025, 12, 30, 1, 49, 52, 266547), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_014948.avi'), file_size=0, duration_seconds=4.060045, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:49:52,285 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_014952.avi at (1280, 720)
+2025-12-30 01:49:52,285 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_014952.avi
+2025-12-30 01:49:52,285 - __main__ - INFO - Recording started for order: RecordingSession(id='198c0904-c7bf-4fa2-9e00-0758df167ffd', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 52, 285671), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_014952.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:49:53,372 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 01:50:04,306 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 01:50:04,307 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 01:50:04,307 - services.recording_service - INFO - Recording stopped: 18, duration: 12.0s
+2025-12-30 01:50:04,308 - __main__ - INFO - Recording stopped: RecordingSession(id='198c0904-c7bf-4fa2-9e00-0758df167ffd', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 1, 49, 52, 285671), end_time=datetime.datetime(2025, 12, 30, 1, 50, 4, 307871), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_014952.avi'), file_size=0, duration_seconds=12.0222, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 01:50:05,328 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:01:11,984 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:01:11] "GET /css/style.css HTTP/1.1" 200 6113 0.001289
+2025-12-30 02:01:11,992 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:01:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000493
+2025-12-30 02:11:52,548 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 02:11:52,549 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 02:11:52,563 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_021152.avi at (1280, 720)
+2025-12-30 02:11:52,570 - services.recording_service - INFO - Recording started: 17 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_021152.avi
+2025-12-30 02:11:52,572 - __main__ - INFO - Recording started for order: RecordingSession(id='5f2ceb90-986d-499d-b247-e2aab972eb8c', order_id='17', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 2, 11, 52, 570180), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_021152.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:11:52,575 - __main__ - ERROR - Fetch design preview error: Invalid URL 'null': No scheme supplied. Perhaps you meant https://null?
+2025-12-30 02:11:56,096 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:11:56,096 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:11:56,096 - services.recording_service - INFO - New order, switching from 17 to 18
+2025-12-30 02:11:56,098 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 02:11:56,099 - services.recording_service - INFO - Recording stopped: 17, duration: 3.5s
+2025-12-30 02:11:56,099 - __main__ - INFO - Recording stopped: RecordingSession(id='5f2ceb90-986d-499d-b247-e2aab972eb8c', order_id='17', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 2, 11, 52, 570180), end_time=datetime.datetime(2025, 12, 30, 2, 11, 56, 99109), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_021152.avi'), file_size=0, duration_seconds=3.528929, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:11:56,120 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021156.avi at (1280, 720)
+2025-12-30 02:11:56,121 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021156.avi
+2025-12-30 02:11:56,122 - __main__ - INFO - Recording started for order: RecordingSession(id='e26d5bc6-5d9e-45de-b26c-dab9b4696a22', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 2, 11, 56, 121604), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021156.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:11:57,418 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:12:08,207 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 02:12:08,212 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 02:12:08,212 - services.recording_service - INFO - Recording stopped: 18, duration: 12.1s
+2025-12-30 02:12:08,212 - __main__ - INFO - Recording stopped: RecordingSession(id='e26d5bc6-5d9e-45de-b26c-dab9b4696a22', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 2, 11, 56, 121604), end_time=datetime.datetime(2025, 12, 30, 2, 12, 8, 212456), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021156.avi'), file_size=0, duration_seconds=12.090852, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:12:09,151 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:12:18,762 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 02:12:18,766 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 02:12:56,631 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 02:12:56,633 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 02:12:56,633 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 02:15:32,998 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:15:32,999 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:15:33,018 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021533.avi at (1280, 720)
+2025-12-30 02:15:33,019 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021533.avi
+2025-12-30 02:15:33,020 - __main__ - INFO - Recording started for order: RecordingSession(id='87d6dbcf-8484-498c-bbd8-772770bea420', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 33, 19010), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021533.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:36,979 - __main__ - INFO - Auto-record: disabled
+2025-12-30 02:15:40,738 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 02:15:40,742 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 02:15:40,766 - services.recording_service - INFO - New order, switching from 18 to 17
+2025-12-30 02:15:40,782 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 02:15:40,787 - services.recording_service - INFO - Recording stopped: 18, duration: 7.8s
+2025-12-30 02:15:40,788 - __main__ - INFO - Recording stopped: RecordingSession(id='87d6dbcf-8484-498c-bbd8-772770bea420', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 33, 19010), end_time=datetime.datetime(2025, 12, 30, 2, 15, 40, 786957), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021533.avi'), file_size=0, duration_seconds=7.767947, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:40,971 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_021540.avi at (1280, 720)
+2025-12-30 02:15:40,982 - services.recording_service - INFO - Recording started: 17 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_021540.avi
+2025-12-30 02:15:40,995 - __main__ - INFO - Recording started for order: RecordingSession(id='f2ee41cf-31d4-4bd5-ad78-a62641e28bcb', order_id='17', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 40, 982135), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_021540.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:41,004 - __main__ - ERROR - Fetch design preview error: Invalid URL 'null': No scheme supplied. Perhaps you meant https://null?
+2025-12-30 02:15:41,994 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:15:45,860 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:15:45,861 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 02:15:45,861 - services.recording_service - INFO - New order, switching from 17 to 18
+2025-12-30 02:15:45,863 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 02:15:45,864 - services.recording_service - INFO - Recording stopped: 17, duration: 4.9s
+2025-12-30 02:15:45,864 - __main__ - INFO - Recording stopped: RecordingSession(id='f2ee41cf-31d4-4bd5-ad78-a62641e28bcb', order_id='17', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 40, 982135), end_time=datetime.datetime(2025, 12, 30, 2, 15, 45, 864009), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_021540.avi'), file_size=0, duration_seconds=4.881874, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:45,880 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021545.avi at (1280, 720)
+2025-12-30 02:15:45,881 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_021545.avi
+2025-12-30 02:15:45,882 - __main__ - INFO - Recording started for order: RecordingSession(id='27772324-cbc5-4a14-b223-54723a411945', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 45, 881306), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021545.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:47,691 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:15:58,010 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 02:15:58,012 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 02:15:58,012 - services.recording_service - INFO - Recording stopped: 18, duration: 12.1s
+2025-12-30 02:15:58,012 - __main__ - INFO - Recording stopped: RecordingSession(id='27772324-cbc5-4a14-b223-54723a411945', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 2, 15, 45, 881306), end_time=datetime.datetime(2025, 12, 30, 2, 15, 58, 12599), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_021545.avi'), file_size=0, duration_seconds=12.131293, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 02:15:59,022 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 02:16:00,492 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:00] "GET /index.html HTTP/1.1" 200 22438 0.004884
+2025-12-30 02:16:00,506 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:00] "GET /css/style.css HTTP/1.1" 200 6113 0.001160
+2025-12-30 02:16:00,527 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:00] "GET /js/app.js HTTP/1.1" 200 24855 0.003057
+2025-12-30 02:16:00,529 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:00] "GET /eel.js HTTP/1.1" 200 6275 0.000532
+2025-12-30 02:16:01,241 - __main__ - INFO - Camera already active, restarting stream for new connection
+2025-12-30 02:16:01,241 - __main__ - INFO - Restarting camera for new connection...
+2025-12-30 02:16:01,713 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 02:16:01,714 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 02:16:04,518 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 02:16:04,551 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 02:16:04,554 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 02:16:04,557 - __main__ - INFO - Camera fully restarted for new connection
+2025-12-30 02:16:04,558 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 02:16:04,568 - __main__ - INFO - No USB scanner detected
+2025-12-30 02:16:05,003 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 02:16:05,007 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000483
+2025-12-30 02:16:05,013 - __main__ - INFO - Device states synced with frontend
+2025-12-30 02:16:06,791 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 02:16:09,857 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 02:16:11,064 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:11] "GET /index.html HTTP/1.1" 200 22438 0.000895
+2025-12-30 02:16:11,071 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:11] "GET /css/style.css HTTP/1.1" 200 6113 0.000656
+2025-12-30 02:16:11,075 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:11] "GET /eel.js HTTP/1.1" 200 6275 0.000448
+2025-12-30 02:16:11,078 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:11] "GET /js/app.js HTTP/1.1" 200 24855 0.000808
+2025-12-30 02:16:11,167 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 02:16:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000373
+2025-12-30 02:16:11,795 - __main__ - INFO - Camera already active, restarting stream for new connection
+2025-12-30 02:16:11,796 - __main__ - INFO - Restarting camera for new connection...
+2025-12-30 02:16:12,249 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 02:16:12,250 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 02:16:14,750 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 02:16:14,753 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 02:16:14,753 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 02:16:14,754 - __main__ - INFO - Camera fully restarted for new connection
+2025-12-30 02:16:14,754 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 02:16:14,763 - __main__ - INFO - No USB scanner detected
+2025-12-30 02:16:15,196 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 02:16:15,201 - __main__ - INFO - Device states synced with frontend
+2025-12-30 02:16:16,701 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 02:16:19,406 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:32:29,753 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 16:32:29,756 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 16:32:30,772 - __main__ - INFO - Desktop app launched with PID: 526256
+2025-12-30 16:32:31,304 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:32:31] "GET /index.html HTTP/1.1" 200 22438 0.001354
+2025-12-30 16:32:31,318 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:32:31] "GET /eel.js HTTP/1.1" 200 6275 0.000287
+2025-12-30 16:32:31,336 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:32:31] "GET /css/style.css HTTP/1.1" 200 6113 0.016368
+2025-12-30 16:32:31,338 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:32:31] "GET /js/app.js HTTP/1.1" 200 24855 0.000878
+2025-12-30 16:32:31,651 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:32:31] "GET /favicon.ico HTTP/1.1" 404 882 0.002013
+2025-12-30 16:32:33,270 - __main__ - INFO - Auto-starting camera...
+2025-12-30 16:32:33,271 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 16:32:36,032 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:32:36,033 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 16:32:36,034 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 16:32:36,034 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 16:32:36,055 - __main__ - INFO - No USB scanner detected
+2025-12-30 16:32:36,448 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 16:32:36,449 - __main__ - INFO - Device states synced with frontend
+2025-12-30 16:32:38,003 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 16:32:40,579 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:32:45,088 - services.order_service - ERROR - Lỗi tải đơn hàng: Order not found
+2025-12-30 16:32:48,847 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:32:48,847 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:32:48,970 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_163248.avi at (1280, 720)
+2025-12-30 16:32:48,970 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_163248.avi
+2025-12-30 16:32:48,971 - __main__ - INFO - Recording started for order: RecordingSession(id='45253bbf-e3b1-402c-81d3-ea5d8a2ab2b4', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 16, 32, 48, 970626), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_163248.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 16:33:00,982 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 16:33:00,987 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 16:33:00,987 - services.recording_service - INFO - Recording stopped: 18, duration: 12.0s
+2025-12-30 16:33:00,987 - __main__ - INFO - Recording stopped: RecordingSession(id='45253bbf-e3b1-402c-81d3-ea5d8a2ab2b4', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 16, 32, 48, 970626), end_time=datetime.datetime(2025, 12, 30, 16, 33, 0, 987459), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_163248.avi'), file_size=0, duration_seconds=12.016833, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 16:33:03,956 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 16:33:29,509 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 16:33:29,509 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 16:33:30,595 - __main__ - INFO - Desktop app launched with PID: 531560
+2025-12-30 16:33:31,025 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:33:31] "GET /index.html HTTP/1.1" 200 22438 0.000941
+2025-12-30 16:33:31,033 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:33:31] "GET /eel.js HTTP/1.1" 200 6275 0.000303
+2025-12-30 16:33:31,035 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:33:31] "GET /css/style.css HTTP/1.1" 200 6113 0.000765
+2025-12-30 16:33:31,037 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:33:31] "GET /js/app.js HTTP/1.1" 200 25075 0.000645
+2025-12-30 16:33:31,233 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:33:31] "GET /favicon.ico HTTP/1.1" 404 882 0.001909
+2025-12-30 16:33:32,554 - __main__ - INFO - Auto-starting camera...
+2025-12-30 16:33:32,554 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 16:33:35,439 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:33:35,440 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 16:33:35,440 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 16:33:35,441 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 16:33:35,446 - __main__ - INFO - No USB scanner detected
+2025-12-30 16:33:35,800 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 16:33:35,800 - __main__ - INFO - Device states synced with frontend
+2025-12-30 16:33:37,343 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 16:33:39,902 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:33:41,095 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:33:41,096 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:33:41,109 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_163341.avi at (1280, 720)
+2025-12-30 16:33:41,109 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_163341.avi
+2025-12-30 16:33:41,110 - __main__ - INFO - Recording started for order: RecordingSession(id='4560d0cd-3ec4-49cc-a482-f8a07dd47469', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 16, 33, 41, 109746), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_163341.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 16:33:53,117 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 16:33:53,119 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 16:33:53,120 - services.recording_service - INFO - Recording stopped: 18, duration: 12.0s
+2025-12-30 16:33:53,120 - __main__ - INFO - Recording stopped: RecordingSession(id='4560d0cd-3ec4-49cc-a482-f8a07dd47469', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 16, 33, 41, 109746), end_time=datetime.datetime(2025, 12, 30, 16, 33, 53, 120122), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_163341.avi'), file_size=0, duration_seconds=12.010376, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 16:33:54,509 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 16:41:02,662 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:41:02] "GET /css/style.css HTTP/1.1" 200 6113 0.035953
+2025-12-30 16:41:02,663 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:41:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000356
+2025-12-30 16:52:49,012 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 16:52:49,012 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 16:52:50,022 - __main__ - INFO - Desktop app launched with PID: 536060
+2025-12-30 16:52:50,446 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:52:50] "GET /index.html HTTP/1.1" 200 18398 0.001093
+2025-12-30 16:52:50,453 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:52:50] "GET /eel.js HTTP/1.1" 200 6275 0.000357
+2025-12-30 16:52:50,467 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:52:50] "GET /css/style.css HTTP/1.1" 200 6446 0.012416
+2025-12-30 16:52:50,469 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:52:50] "GET /js/app.js HTTP/1.1" 200 23440 0.000828
+2025-12-30 16:52:50,663 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:52:50] "GET /favicon.ico HTTP/1.1" 404 882 0.001795
+2025-12-30 16:52:52,272 - __main__ - INFO - Auto-starting camera...
+2025-12-30 16:52:52,272 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 16:52:54,324 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:52:54,324 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 16:52:54,324 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 16:52:54,325 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 16:52:54,330 - __main__ - INFO - No USB scanner detected
+2025-12-30 16:52:54,718 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 16:52:54,719 - __main__ - INFO - Device states synced with frontend
+2025-12-30 16:52:56,230 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 16:52:59,129 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 16:53:04,061 - __main__ - INFO - Auto-record: disabled
+2025-12-30 16:53:07,692 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:53:07,693 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:54:16,771 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 16:54:16,772 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 16:54:54,997 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:54:54,998 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 16:56:00,979 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:56:00] "GET /css/style.css HTTP/1.1" 200 6446 0.007023
+2025-12-30 16:56:01,253 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 16:56:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000504
+2025-12-30 17:21:36,860 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:21:36,860 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:21:37,870 - __main__ - INFO - Desktop app launched with PID: 532688
+2025-12-30 17:21:38,269 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:21:38] "GET /index.html HTTP/1.1" 200 18398 0.000900
+2025-12-30 17:21:38,277 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:21:38] "GET /eel.js HTTP/1.1" 200 6275 0.000326
+2025-12-30 17:21:38,279 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:21:38] "GET /css/style.css HTTP/1.1" 200 6446 0.000544
+2025-12-30 17:21:38,284 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:21:38] "GET /js/app.js HTTP/1.1" 200 23440 0.000591
+2025-12-30 17:21:38,459 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:21:38] "GET /favicon.ico HTTP/1.1" 404 882 0.002027
+2025-12-30 17:21:40,105 - __main__ - INFO - Auto-starting camera...
+2025-12-30 17:21:40,105 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 17:21:43,339 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 17:21:43,342 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 17:21:43,345 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 17:21:43,364 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 17:21:43,537 - __main__ - INFO - No USB scanner detected
+2025-12-30 17:21:44,009 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 17:21:44,020 - __main__ - INFO - Device states synced with frontend
+2025-12-30 17:21:45,047 - __main__ - INFO - Auto-record: disabled
+2025-12-30 17:21:45,721 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 17:21:48,271 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 17:21:52,098 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 17:21:52,099 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 17:32:37,869 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:32:37] "GET /css/style.css HTTP/1.1" 200 6446 0.000690
+2025-12-30 17:32:37,963 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:32:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000415
+2025-12-30 17:45:57,285 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:45:57,285 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:45:58,295 - __main__ - INFO - Desktop app launched with PID: 522052
+2025-12-30 17:45:58,732 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:45:58] "GET /index.html HTTP/1.1" 200 17666 0.000794
+2025-12-30 17:45:58,748 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:45:58] "GET /eel.js HTTP/1.1" 200 6277 0.000344
+2025-12-30 17:45:58,750 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:45:58] "GET /css/style.css HTTP/1.1" 200 6446 0.000928
+2025-12-30 17:45:58,752 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:45:58] "GET /js/app.js HTTP/1.1" 200 23742 0.000523
+2025-12-30 17:45:58,962 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:45:58] "GET /favicon.ico HTTP/1.1" 404 882 0.001823
+2025-12-30 17:46:07,038 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:07] "GET /index.html? HTTP/1.1" 200 17666 0.001286
+2025-12-30 17:46:07,046 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:07] "GET /css/style.css HTTP/1.1" 200 6446 0.000688
+2025-12-30 17:46:07,047 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:07] "GET /eel.js HTTP/1.1" 200 6277 0.000247
+2025-12-30 17:46:07,048 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:07] "GET /js/app.js HTTP/1.1" 200 23742 0.000745
+2025-12-30 17:46:19,743 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:19] "GET /index.html? HTTP/1.1" 200 17666 0.001290
+2025-12-30 17:46:19,748 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:19] "GET /css/style.css HTTP/1.1" 200 6446 0.000497
+2025-12-30 17:46:19,750 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:19] "GET /eel.js HTTP/1.1" 200 6277 0.000295
+2025-12-30 17:46:19,751 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:19] "GET /js/app.js HTTP/1.1" 200 23742 0.000795
+2025-12-30 17:46:30,055 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:30] "GET /index.html? HTTP/1.1" 200 17666 0.001667
+2025-12-30 17:46:30,063 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:30] "GET /eel.js HTTP/1.1" 200 6277 0.000381
+2025-12-30 17:46:30,065 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:30] "GET /css/style.css HTTP/1.1" 200 6446 0.001130
+2025-12-30 17:46:30,066 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:30] "GET /js/app.js HTTP/1.1" 200 23742 0.000558
+2025-12-30 17:46:43,177 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:46:43,178 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:46:44,188 - __main__ - INFO - Desktop app launched with PID: 522336
+2025-12-30 17:46:44,606 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:44] "GET /index.html HTTP/1.1" 200 17666 0.000894
+2025-12-30 17:46:44,614 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:44] "GET /eel.js HTTP/1.1" 200 6277 0.000353
+2025-12-30 17:46:44,619 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:44] "GET /css/style.css HTTP/1.1" 200 6446 0.000617
+2025-12-30 17:46:44,625 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:44] "GET /js/app.js HTTP/1.1" 200 23742 0.000618
+2025-12-30 17:46:44,808 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:44] "GET /favicon.ico HTTP/1.1" 404 882 0.001858
+2025-12-30 17:46:49,986 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:49] "GET /index.html? HTTP/1.1" 200 17666 0.000713
+2025-12-30 17:46:49,992 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:49] "GET /css/style.css HTTP/1.1" 200 6446 0.000951
+2025-12-30 17:46:49,993 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:49] "GET /eel.js HTTP/1.1" 200 6277 0.000276
+2025-12-30 17:46:49,995 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:49] "GET /js/app.js HTTP/1.1" 200 23742 0.000961
+2025-12-30 17:46:54,436 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:54] "GET /index.html? HTTP/1.1" 200 17666 0.001537
+2025-12-30 17:46:54,443 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:54] "GET /css/style.css HTTP/1.1" 200 6446 0.000905
+2025-12-30 17:46:54,444 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:54] "GET /eel.js HTTP/1.1" 200 6277 0.000220
+2025-12-30 17:46:54,446 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:46:54] "GET /js/app.js HTTP/1.1" 200 23742 0.000975
+2025-12-30 17:48:04,614 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:48:04,614 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:48:05,624 - __main__ - INFO - Desktop app launched with PID: 533084
+2025-12-30 17:48:06,144 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:06] "GET /index.html HTTP/1.1" 200 17666 0.001121
+2025-12-30 17:48:06,153 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:06] "GET /eel.js HTTP/1.1" 200 6277 0.000352
+2025-12-30 17:48:06,154 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:06] "GET /css/style.css HTTP/1.1" 200 6446 0.000848
+2025-12-30 17:48:06,158 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:06] "GET /js/app.js HTTP/1.1" 200 23742 0.000570
+2025-12-30 17:48:06,337 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:06] "GET /favicon.ico HTTP/1.1" 404 882 0.001779
+2025-12-30 17:48:10,824 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:10] "GET /index.html? HTTP/1.1" 200 17666 0.000949
+2025-12-30 17:48:10,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:10] "GET /css/style.css HTTP/1.1" 200 6446 0.001091
+2025-12-30 17:48:10,832 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:10] "GET /eel.js HTTP/1.1" 200 6277 0.000311
+2025-12-30 17:48:10,833 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:10] "GET /js/app.js HTTP/1.1" 200 23742 0.000515
+2025-12-30 17:48:12,042 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /index.html? HTTP/1.1" 200 17666 0.000998
+2025-12-30 17:48:12,047 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /css/style.css HTTP/1.1" 200 6446 0.000525
+2025-12-30 17:48:12,048 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /eel.js HTTP/1.1" 200 6277 0.000174
+2025-12-30 17:48:12,049 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /js/app.js HTTP/1.1" 200 23742 0.000485
+2025-12-30 17:48:12,396 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /index.html? HTTP/1.1" 200 17666 0.001451
+2025-12-30 17:48:12,401 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /css/style.css HTTP/1.1" 200 6446 0.000530
+2025-12-30 17:48:12,402 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /eel.js HTTP/1.1" 200 6277 0.000252
+2025-12-30 17:48:12,403 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:12] "GET /js/app.js HTTP/1.1" 200 23742 0.000465
+2025-12-30 17:48:16,477 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:16] "GET /index.html? HTTP/1.1" 200 17666 0.000862
+2025-12-30 17:48:16,485 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:16] "GET /css/style.css HTTP/1.1" 200 6446 0.000588
+2025-12-30 17:48:16,487 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:16] "GET /eel.js HTTP/1.1" 200 6277 0.000304
+2025-12-30 17:48:16,488 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:48:16] "GET /js/app.js HTTP/1.1" 200 23742 0.000951
+2025-12-30 17:49:48,678 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:49:48,678 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:49:49,688 - __main__ - INFO - Desktop app launched with PID: 532240
+2025-12-30 17:49:50,098 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:49:50] "GET /index.html HTTP/1.1" 200 17666 0.000868
+2025-12-30 17:49:50,103 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:49:50] "GET /eel.js HTTP/1.1" 200 6277 0.000289
+2025-12-30 17:49:50,104 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:49:50] "GET /css/style.css HTTP/1.1" 200 6446 0.000678
+2025-12-30 17:49:50,106 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:49:50] "GET /js/app.js HTTP/1.1" 200 24432 0.000578
+2025-12-30 17:49:50,579 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:49:50] "GET /favicon.ico HTTP/1.1" 404 882 0.001849
+2025-12-30 17:50:42,814 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:50:42,815 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:50:44,833 - __main__ - INFO - Desktop app launched with PID: 529344
+2025-12-30 17:50:45,245 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:50:45] "GET /index.html HTTP/1.1" 200 17666 0.001069
+2025-12-30 17:50:45,254 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:50:45] "GET /eel.js HTTP/1.1" 200 6277 0.000481
+2025-12-30 17:50:45,262 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:50:45] "GET /css/style.css HTTP/1.1" 200 6446 0.000657
+2025-12-30 17:50:45,265 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:50:45] "GET /js/app.js HTTP/1.1" 200 24432 0.000622
+2025-12-30 17:50:45,490 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:50:45] "GET /favicon.ico HTTP/1.1" 404 882 0.003033
+2025-12-30 17:52:46,503 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:52:46,503 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:52:48,515 - __main__ - INFO - Desktop app launched with PID: 532220
+2025-12-30 17:52:49,194 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:52:49] "GET /index.html HTTP/1.1" 200 17666 0.000725
+2025-12-30 17:52:49,200 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:52:49] "GET /css/style.css HTTP/1.1" 200 6446 0.000609
+2025-12-30 17:52:49,200 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:52:49] "GET /eel.js HTTP/1.1" 200 6277 0.000220
+2025-12-30 17:52:49,202 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:52:49] "GET /js/app.js HTTP/1.1" 200 24518 0.000482
+2025-12-30 17:52:49,384 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:52:49] "GET /favicon.ico HTTP/1.1" 404 882 0.002001
+2025-12-30 17:53:16,857 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:53:16,857 - __main__ - INFO - Starting in server-only mode. Open http://localhost:8080/index.html
+2025-12-30 17:53:31,832 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:53:31] "GET /index.html?id=14127845-89a5-4634-8df5-98aef969c230&vscodeBrowserReqId=1767092011515 HTTP/1.1" 200 17666 0.001318
+2025-12-30 17:53:31,842 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:53:31] "GET /eel.js HTTP/1.1" 200 6277 0.000291
+2025-12-30 17:53:31,843 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:53:31] "GET /css/style.css HTTP/1.1" 200 6446 0.000584
+2025-12-30 17:53:31,844 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:53:31] "GET /js/app.js HTTP/1.1" 200 24518 0.000499
+2025-12-30 17:54:02,543 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:54:02,543 - __main__ - INFO - Starting in server-only mode. Open http://localhost:8080/index.html
+2025-12-30 17:54:51,364 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:54:51,365 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:54:53,376 - __main__ - INFO - Desktop app launched with PID: 512884
+2025-12-30 17:54:53,799 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:53] "GET /index.html HTTP/1.1" 200 17666 0.000901
+2025-12-30 17:54:53,806 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:53] "GET /eel.js HTTP/1.1" 200 6277 0.000361
+2025-12-30 17:54:53,807 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:53] "GET /css/style.css HTTP/1.1" 200 6446 0.000538
+2025-12-30 17:54:53,808 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:53] "GET /js/app.js HTTP/1.1" 200 24518 0.000681
+2025-12-30 17:54:54,312 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:54] "GET /favicon.ico HTTP/1.1" 404 882 0.001989
+2025-12-30 17:54:58,493 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:58] "GET /index.html? HTTP/1.1" 200 17666 0.000931
+2025-12-30 17:54:58,499 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:58] "GET /css/style.css HTTP/1.1" 200 6446 0.000593
+2025-12-30 17:54:58,501 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:58] "GET /js/app.js HTTP/1.1" 200 24518 0.000539
+2025-12-30 17:54:58,501 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:54:58] "GET /eel.js HTTP/1.1" 200 6277 0.000206
+2025-12-30 17:55:30,668 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 17:55:30,669 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 17:55:32,679 - __main__ - INFO - Desktop app launched with PID: 533904
+2025-12-30 17:55:33,124 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:33] "GET /index.html HTTP/1.1" 200 17666 0.000754
+2025-12-30 17:55:33,132 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:33] "GET /eel.js HTTP/1.1" 200 6277 0.000365
+2025-12-30 17:55:33,133 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:33] "GET /css/style.css HTTP/1.1" 200 6446 0.000505
+2025-12-30 17:55:33,150 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:33] "GET /js/app.js HTTP/1.1" 200 24518 0.000852
+2025-12-30 17:55:33,314 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:33] "GET /favicon.ico HTTP/1.1" 404 882 0.003002
+2025-12-30 17:55:39,577 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:39] "GET /index.html? HTTP/1.1" 200 17666 0.000995
+2025-12-30 17:55:39,584 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:39] "GET /css/style.css HTTP/1.1" 200 6446 0.000724
+2025-12-30 17:55:39,586 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:39] "GET /eel.js HTTP/1.1" 200 6277 0.000381
+2025-12-30 17:55:39,588 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 17:55:39] "GET /js/app.js HTTP/1.1" 200 24518 0.001144
+2025-12-30 18:02:23,962 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 18:02:23,963 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 18:02:25,022 - __main__ - INFO - Desktop app launched with PID: 525544
+2025-12-30 18:02:25,463 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:02:25] "GET /index.html HTTP/1.1" 200 17741 0.000919
+2025-12-30 18:02:25,471 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:02:25] "GET /eel.js HTTP/1.1" 200 6298 0.000290
+2025-12-30 18:02:25,495 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:02:25] "GET /css/style.css HTTP/1.1" 200 6446 0.010501
+2025-12-30 18:02:25,499 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:02:25] "GET /js/app.js HTTP/1.1" 200 24456 0.000991
+2025-12-30 18:02:25,659 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:02:25] "GET /favicon.ico HTTP/1.1" 404 882 0.002260
+2025-12-30 18:02:27,226 - __main__ - INFO - Auto-starting camera...
+2025-12-30 18:02:27,227 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 18:02:29,344 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 18:02:29,344 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 18:02:29,344 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 18:02:29,345 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 18:02:29,359 - __main__ - INFO - No USB scanner detected
+2025-12-30 18:02:29,722 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 18:02:29,723 - __main__ - INFO - Device states synced with frontend
+2025-12-30 18:02:31,286 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 18:02:34,229 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 18:02:46,090 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 18:02:46,091 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 18:02:46,266 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_180246.avi at (1280, 720)
+2025-12-30 18:02:46,266 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_180246.avi
+2025-12-30 18:02:46,266 - __main__ - INFO - Recording started for order: RecordingSession(id='00fa4e8f-e959-41ef-aecc-f6c618263219', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 18, 2, 46, 266500), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_180246.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 18:02:58,337 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 18:02:58,342 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 18:02:58,342 - services.recording_service - INFO - Recording stopped: 19, duration: 12.1s
+2025-12-30 18:02:58,343 - __main__ - INFO - Recording stopped: RecordingSession(id='00fa4e8f-e959-41ef-aecc-f6c618263219', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 18, 2, 46, 266500), end_time=datetime.datetime(2025, 12, 30, 18, 2, 58, 342710), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_180246.avi'), file_size=0, duration_seconds=12.07621, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 18:03:02,458 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 18:45:23,007 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:45:23] "GET /css/style.css HTTP/1.1" 200 6446 0.001801
+2025-12-30 18:45:23,009 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 18:45:23] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000751
+2025-12-30 19:11:52,172 - __main__ - INFO - Auto-record: disabled
+2025-12-30 19:11:57,853 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:11:57,854 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:12:15,409 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 19:12:15,435 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 19:19:35,560 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 19:19:40,289 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 19:19:44,639 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 19:19:49,819 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:19:49,820 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:32:53,143 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:32:53] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.004073
+2025-12-30 19:45:55,547 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 19:45:55,548 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 19:45:56,558 - __main__ - INFO - Desktop app launched with PID: 522400
+2025-12-30 19:45:56,988 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:45:56] "GET /index.html HTTP/1.1" 200 16664 0.000967
+2025-12-30 19:45:56,996 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:45:56] "GET /eel.js HTTP/1.1" 200 6298 0.000339
+2025-12-30 19:45:56,998 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:45:56] "GET /css/style.css HTTP/1.1" 200 6446 0.000703
+2025-12-30 19:45:57,000 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:45:57] "GET /js/app.js HTTP/1.1" 200 23923 0.000576
+2025-12-30 19:45:57,247 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:45:57] "GET /favicon.ico HTTP/1.1" 404 882 0.001993
+2025-12-30 19:45:58,665 - __main__ - INFO - Auto-starting camera...
+2025-12-30 19:45:58,665 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 19:46:01,081 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 19:46:01,082 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 19:46:01,082 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 19:46:01,083 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 19:46:01,089 - __main__ - INFO - No USB scanner detected
+2025-12-30 19:46:01,508 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 19:46:01,509 - __main__ - INFO - Device states synced with frontend
+2025-12-30 19:46:02,989 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 19:46:06,035 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 19:46:42,805 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:46:42,806 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:46:42,940 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_194642.avi at (1280, 720)
+2025-12-30 19:46:43,042 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_194642.avi
+2025-12-30 19:46:43,046 - __main__ - INFO - Recording started for order: RecordingSession(id='a75cfc17-ff11-4941-80aa-55cc25b959b5', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 19, 46, 43, 42631), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_194642.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 19:46:55,079 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 19:46:55,082 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 19:46:55,082 - services.recording_service - INFO - Recording stopped: 19, duration: 12.0s
+2025-12-30 19:46:55,082 - __main__ - INFO - Recording stopped: RecordingSession(id='a75cfc17-ff11-4941-80aa-55cc25b959b5', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 19, 46, 43, 42631), end_time=datetime.datetime(2025, 12, 30, 19, 46, 55, 82441), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_194642.avi'), file_size=0, duration_seconds=12.03981, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 19:46:56,407 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 19:49:06,552 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 19:49:06,552 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 19:49:07,572 - __main__ - INFO - Desktop app launched with PID: 44500
+2025-12-30 19:49:07,984 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:49:07] "GET /index.html HTTP/1.1" 200 16664 0.000856
+2025-12-30 19:49:07,990 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:49:07] "GET /eel.js HTTP/1.1" 200 6298 0.000283
+2025-12-30 19:49:07,991 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:49:07] "GET /css/style.css HTTP/1.1" 200 6446 0.000524
+2025-12-30 19:49:07,992 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:49:07] "GET /js/app.js HTTP/1.1" 200 23923 0.000492
+2025-12-30 19:49:08,203 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:49:08] "GET /favicon.ico HTTP/1.1" 404 882 0.001934
+2025-12-30 19:49:09,778 - __main__ - INFO - Auto-starting camera...
+2025-12-30 19:49:09,780 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 19:49:11,926 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 19:49:11,929 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 19:49:11,929 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 19:49:11,929 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 19:49:11,934 - __main__ - INFO - No USB scanner detected
+2025-12-30 19:49:12,979 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 19:49:12,981 - __main__ - INFO - Device states synced with frontend
+2025-12-30 19:49:13,835 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 19:49:17,214 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 19:49:22,519 - __main__ - INFO - Camera selected: 1
+2025-12-30 19:49:23,053 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 19:49:23,064 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 19:49:23,365 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 19:49:23,367 - camera.camera_manager - INFO - Camera removed: camera_0
+2025-12-30 19:49:23,367 - camera.camera_manager - INFO - Camera added: camera_1
+2025-12-30 19:49:25,776 - camera.camera_manager - INFO - Camera camera_1 connected
+2025-12-30 19:49:25,781 - camera.camera_manager - INFO - Camera camera_1 started
+2025-12-30 19:49:25,781 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 19:49:57,250 - __main__ - INFO - Camera selected: 0
+2025-12-30 19:49:57,708 - camera.camera_manager - INFO - Camera camera_1 stopped
+2025-12-30 19:49:57,709 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 19:49:58,012 - camera.camera_manager - INFO - Camera camera_1 stopped
+2025-12-30 19:49:58,013 - camera.camera_manager - INFO - Camera removed: camera_1
+2025-12-30 19:49:58,013 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 19:50:00,262 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 19:50:00,292 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 19:50:00,294 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 19:50:02,840 - __main__ - INFO - Camera selected: 1
+2025-12-30 19:50:03,251 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 19:50:03,255 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 19:50:03,556 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 19:50:03,557 - camera.camera_manager - INFO - Camera removed: camera_0
+2025-12-30 19:50:03,558 - camera.camera_manager - INFO - Camera added: camera_1
+2025-12-30 19:50:05,890 - camera.camera_manager - INFO - Camera camera_1 connected
+2025-12-30 19:50:05,893 - camera.camera_manager - INFO - Camera camera_1 started
+2025-12-30 19:50:05,893 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 19:50:28,843 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:50:28,845 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 19:50:28,910 - camera.camera_manager - INFO - Camera camera_1 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_195028.avi at (1920, 1080)
+2025-12-30 19:50:28,912 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_195028.avi
+2025-12-30 19:50:28,913 - __main__ - INFO - Recording started for order: RecordingSession(id='4b569a7c-1dc8-410d-adef-b8ee0dea33fd', order_id='19', camera_id='camera_1', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 19, 50, 28, 912732), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_195028.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 19:50:41,152 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 19:50:41,155 - camera.camera_manager - INFO - Camera camera_1 stopped recording
+2025-12-30 19:50:41,155 - services.recording_service - INFO - Recording stopped: 19, duration: 12.2s
+2025-12-30 19:50:41,156 - __main__ - INFO - Recording stopped: RecordingSession(id='4b569a7c-1dc8-410d-adef-b8ee0dea33fd', order_id='19', camera_id='camera_1', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 19, 50, 28, 912732), end_time=datetime.datetime(2025, 12, 30, 19, 50, 41, 155811), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_195028.avi'), file_size=0, duration_seconds=12.243079, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 19:50:42,522 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 19:57:23,689 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:57:23] "GET /css/style.css HTTP/1.1" 200 6446 0.001220
+2025-12-30 19:57:23,734 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:57:23] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000844
+2025-12-30 19:58:35,922 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 19:58:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000431
+2025-12-30 20:32:51,575 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 20:32:51] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000672
+2025-12-30 21:01:39,816 - camera.camera_manager - INFO - Camera camera_1 stopped
+2025-12-30 21:01:39,820 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 21:01:45,464 - camera.camera_manager - INFO - Camera camera_1 connected
+2025-12-30 21:01:45,480 - camera.camera_manager - INFO - Camera camera_1 started
+2025-12-30 21:01:45,485 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 21:10:17,083 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:10:17,108 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:10:17,261 - camera.camera_manager - INFO - Camera camera_1 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_211017.avi at (1920, 1080)
+2025-12-30 21:10:17,262 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_211017.avi
+2025-12-30 21:10:17,264 - __main__ - INFO - Recording started for order: RecordingSession(id='c5f2b913-2d12-4f31-804f-f93912ce2173', order_id='18', camera_id='camera_1', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 10, 17, 262891), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_211017.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:10:29,281 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:10:29,284 - camera.camera_manager - INFO - Camera camera_1 stopped recording
+2025-12-30 21:10:29,285 - services.recording_service - INFO - Recording stopped: 18, duration: 12.0s
+2025-12-30 21:10:29,286 - __main__ - INFO - Recording stopped: RecordingSession(id='c5f2b913-2d12-4f31-804f-f93912ce2173', order_id='18', camera_id='camera_1', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 10, 17, 262891), end_time=datetime.datetime(2025, 12, 30, 21, 10, 29, 285428), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_211017.avi'), file_size=0, duration_seconds=12.022537, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:10:30,482 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:10:59,242 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:10:59,243 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:10:59,281 - camera.camera_manager - INFO - Camera camera_1 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_211059.avi at (1920, 1080)
+2025-12-30 21:10:59,324 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_211059.avi
+2025-12-30 21:10:59,374 - __main__ - INFO - Recording started for order: RecordingSession(id='82027815-5ed7-4a46-a840-230a219eb5f3', order_id='19', camera_id='camera_1', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 10, 59, 324687), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_211059.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:11:11,435 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:11:11,437 - camera.camera_manager - INFO - Camera camera_1 stopped recording
+2025-12-30 21:11:11,439 - services.recording_service - INFO - Recording stopped: 19, duration: 12.1s
+2025-12-30 21:11:11,439 - __main__ - INFO - Recording stopped: RecordingSession(id='82027815-5ed7-4a46-a840-230a219eb5f3', order_id='19', camera_id='camera_1', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 10, 59, 324687), end_time=datetime.datetime(2025, 12, 30, 21, 11, 11, 439184), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_211059.avi'), file_size=0, duration_seconds=12.114497, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:11:12,560 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:11:45,910 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:11:45] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000717
+2025-12-30 21:21:58,378 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 21:21:58,379 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 21:21:59,388 - __main__ - INFO - Desktop app launched with PID: 533332
+2025-12-30 21:21:59,803 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:21:59] "GET /index.html HTTP/1.1" 200 16760 0.001004
+2025-12-30 21:21:59,811 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:21:59] "GET /eel.js HTTP/1.1" 200 6298 0.000359
+2025-12-30 21:21:59,825 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:21:59] "GET /css/style.css HTTP/1.1" 200 6950 0.012510
+2025-12-30 21:21:59,827 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:21:59] "GET /js/app.js HTTP/1.1" 200 23934 0.000712
+2025-12-30 21:22:00,202 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:22:00] "GET /favicon.ico HTTP/1.1" 404 882 0.002600
+2025-12-30 21:22:01,859 - __main__ - INFO - Auto-starting camera...
+2025-12-30 21:22:01,859 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 21:22:04,509 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:22:04,510 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 21:22:04,510 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 21:22:04,510 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 21:22:04,517 - __main__ - INFO - No USB scanner detected
+2025-12-30 21:22:06,380 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 21:22:06,381 - __main__ - INFO - Device states synced with frontend
+2025-12-30 21:22:06,463 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 21:22:09,015 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:22:12,827 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:22:12,827 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:22:12,846 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212212.avi at (1280, 720)
+2025-12-30 21:22:12,847 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212212.avi
+2025-12-30 21:22:12,848 - __main__ - INFO - Recording started for order: RecordingSession(id='402e399c-225d-4f77-bb58-cf5b14514d94', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 22, 12, 847705), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212212.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:22:25,007 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:22:25,009 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:22:25,009 - services.recording_service - INFO - Recording stopped: 19, duration: 12.2s
+2025-12-30 21:22:25,009 - __main__ - INFO - Recording stopped: RecordingSession(id='402e399c-225d-4f77-bb58-cf5b14514d94', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 22, 12, 847705), end_time=datetime.datetime(2025, 12, 30, 21, 22, 25, 9249), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212212.avi'), file_size=0, duration_seconds=12.161544, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:22:26,497 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:22:52,985 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:22:52] "GET /css/style.css HTTP/1.1" 200 6950 0.002570
+2025-12-30 21:22:53,002 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:22:53] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.001101
+2025-12-30 21:24:20,798 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:24:20,799 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:24:20,814 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_212420.avi at (1280, 720)
+2025-12-30 21:24:20,814 - services.recording_service - INFO - Recording started: 18 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_18_20251230_212420.avi
+2025-12-30 21:24:20,815 - __main__ - INFO - Recording started for order: RecordingSession(id='b2065e1d-009b-44f9-9dac-218de80143b3', order_id='18', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 24, 20, 814960), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_212420.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:24:32,826 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:24:32,828 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:24:32,829 - services.recording_service - INFO - Recording stopped: 18, duration: 12.0s
+2025-12-30 21:24:32,829 - __main__ - INFO - Recording stopped: RecordingSession(id='b2065e1d-009b-44f9-9dac-218de80143b3', order_id='18', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 24, 20, 814960), end_time=datetime.datetime(2025, 12, 30, 21, 24, 32, 828966), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_18_20251230_212420.avi'), file_size=0, duration_seconds=12.014006, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:24:33,789 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:26:16,302 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 21:26:16,302 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 21:26:17,311 - __main__ - INFO - Desktop app launched with PID: 529144
+2025-12-30 21:26:17,738 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:26:17] "GET /index.html HTTP/1.1" 200 16760 0.000845
+2025-12-30 21:26:17,745 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:26:17] "GET /eel.js HTTP/1.1" 200 6298 0.000258
+2025-12-30 21:26:17,761 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:26:17] "GET /css/style.css HTTP/1.1" 200 7621 0.014623
+2025-12-30 21:26:17,764 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:26:17] "GET /js/app.js HTTP/1.1" 200 23934 0.000628
+2025-12-30 21:26:17,950 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:26:17] "GET /favicon.ico HTTP/1.1" 404 882 0.002060
+2025-12-30 21:26:19,371 - __main__ - INFO - Auto-starting camera...
+2025-12-30 21:26:19,372 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 21:26:21,755 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:26:21,949 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 21:26:22,001 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 21:26:22,006 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 21:26:22,032 - __main__ - INFO - No USB scanner detected
+2025-12-30 21:26:23,121 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 21:26:23,123 - __main__ - INFO - Device states synced with frontend
+2025-12-30 21:26:23,986 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 21:26:26,861 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:26:28,535 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:26:28,540 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:26:28,727 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212628.avi at (1280, 720)
+2025-12-30 21:26:28,731 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212628.avi
+2025-12-30 21:26:28,734 - __main__ - INFO - Recording started for order: RecordingSession(id='d84d4f85-802c-455b-9fb9-7422fb55a55c', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 26, 28, 730995), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212628.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:26:40,762 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:26:40,765 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:26:40,765 - services.recording_service - INFO - Recording stopped: 19, duration: 12.0s
+2025-12-30 21:26:40,765 - __main__ - INFO - Recording stopped: RecordingSession(id='d84d4f85-802c-455b-9fb9-7422fb55a55c', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 26, 28, 730995), end_time=datetime.datetime(2025, 12, 30, 21, 26, 40, 765192), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212628.avi'), file_size=0, duration_seconds=12.034197, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:26:43,797 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:27:24,870 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 21:27:26,837 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 21:28:44,221 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:28:44,222 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:28:44,234 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212844.avi at (1280, 720)
+2025-12-30 21:28:44,235 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_212844.avi
+2025-12-30 21:28:44,235 - __main__ - INFO - Recording started for order: RecordingSession(id='e9ff0ffd-9f78-4953-ba00-52c185456b0b', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 28, 44, 235131), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212844.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:28:56,260 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:28:56,287 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:28:56,290 - services.recording_service - INFO - Recording stopped: 19, duration: 12.1s
+2025-12-30 21:28:56,290 - __main__ - INFO - Recording stopped: RecordingSession(id='e9ff0ffd-9f78-4953-ba00-52c185456b0b', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 28, 44, 235131), end_time=datetime.datetime(2025, 12, 30, 21, 28, 56, 290408), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_212844.avi'), file_size=0, duration_seconds=12.055277, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:28:57,351 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:29:39,489 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 21:29:39,490 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 21:29:39,505 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_212939.avi at (1280, 720)
+2025-12-30 21:29:39,507 - services.recording_service - INFO - Recording started: 17 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_17_20251230_212939.avi
+2025-12-30 21:29:39,508 - __main__ - INFO - Recording started for order: RecordingSession(id='ff14c80b-d877-4696-81ae-5594c2d45640', order_id='17', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 29, 39, 507220), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_212939.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:29:43,575 - __main__ - ERROR - Change fulfill status error: 'EelApp' object has no attribute 'auth_service'
+2025-12-30 21:29:51,598 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:29:51,600 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:29:51,601 - services.recording_service - INFO - Recording stopped: 17, duration: 12.1s
+2025-12-30 21:29:51,601 - __main__ - INFO - Recording stopped: RecordingSession(id='ff14c80b-d877-4696-81ae-5594c2d45640', order_id='17', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 29, 39, 507220), end_time=datetime.datetime(2025, 12, 30, 21, 29, 51, 601143), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_17_20251230_212939.avi'), file_size=0, duration_seconds=12.093923, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:29:52,905 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:32:56,054 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:32:56] "GET /css/style.css HTTP/1.1" 200 7621 0.000654
+2025-12-30 21:32:56,055 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:32:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000285
+2025-12-30 21:39:37,699 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2025-12-30 21:39:37,700 - __main__ - INFO - Starting as desktop app using Edge
+2025-12-30 21:39:38,711 - __main__ - INFO - Desktop app launched with PID: 522604
+2025-12-30 21:39:39,168 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:39:39] "GET /index.html HTTP/1.1" 200 16760 0.001036
+2025-12-30 21:39:39,178 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:39:39] "GET /eel.js HTTP/1.1" 200 6298 0.000330
+2025-12-30 21:39:39,181 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:39:39] "GET /css/style.css HTTP/1.1" 200 7621 0.000649
+2025-12-30 21:39:39,185 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:39:39] "GET /js/app.js HTTP/1.1" 200 24766 0.000680
+2025-12-30 21:39:39,408 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2025-12-30 21:39:39] "GET /favicon.ico HTTP/1.1" 404 882 0.002656
+2025-12-30 21:39:40,791 - __main__ - INFO - Auto-starting camera...
+2025-12-30 21:39:40,792 - camera.camera_manager - INFO - Camera added: camera_0
+2025-12-30 21:39:42,781 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:39:42,782 - camera.camera_manager - INFO - Camera camera_0 started
+2025-12-30 21:39:42,782 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2025-12-30 21:39:42,783 - __main__ - INFO - Auto-detecting scanner...
+2025-12-30 21:39:42,789 - __main__ - INFO - No USB scanner detected
+2025-12-30 21:39:44,014 - __main__ - INFO - Recording limit set to: 12s
+2025-12-30 21:39:44,015 - __main__ - INFO - Device states synced with frontend
+2025-12-30 21:39:44,685 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2025-12-30 21:39:47,621 - camera.camera_manager - INFO - Camera camera_0 connected
+2025-12-30 21:39:49,910 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:39:49,912 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:39:49,924 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_213949.avi at (1280, 720)
+2025-12-30 21:39:49,924 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20251230_213949.avi
+2025-12-30 21:39:49,925 - __main__ - INFO - Recording started for order: RecordingSession(id='8ffa14ea-640e-4cc6-abc4-abf565dd520d', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2025, 12, 30, 21, 39, 49, 924925), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_213949.avi'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:40:01,933 - __main__ - INFO - Recording limit reached: 12s >= 12s
+2025-12-30 21:40:01,936 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2025-12-30 21:40:01,936 - services.recording_service - INFO - Recording stopped: 19, duration: 12.0s
+2025-12-30 21:40:01,936 - __main__ - INFO - Recording stopped: RecordingSession(id='8ffa14ea-640e-4cc6-abc4-abf565dd520d', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2025, 12, 30, 21, 39, 49, 924925), end_time=datetime.datetime(2025, 12, 30, 21, 40, 1, 936238), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20251230_213949.avi'), file_size=0, duration_seconds=12.011313, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2025-12-30 21:40:03,486 - services.b2_uploader - ERROR - Failed to initialize B2: Invalid authorization token. Server said:  (bad_auth_token)
+2025-12-30 21:40:04,018 - camera.camera_manager - INFO - Camera camera_0 stopped
+2025-12-30 21:40:04,019 - camera.camera_manager - INFO - Camera manager stopped
+2025-12-30 21:40:06,433 - __main__ - INFO - Auto-record: disabled
+2025-12-30 21:40:14,907 - services.order_service - INFO - Order loaded: #17 (ref: emb1428_577119293904687426)
+2025-12-30 21:40:14,909 - activity - INFO - [order_view] Order viewed: #17 (ref: emb1428_577119293904687426)
+2025-12-30 21:40:20,781 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:40:20,782 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:40:23,986 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:40:23,986 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2025-12-30 21:42:55,026 - services.order_service - INFO - Order loaded: #18 (ref: emb1429_577119897123721374)
+2025-12-30 21:42:55,030 - activity - INFO - [order_view] Order viewed: #18 (ref: emb1429_577119897123721374)

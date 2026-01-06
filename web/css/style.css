@@ -1,0 +1,496 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1F2937;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4B5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+}
+
+/* Status Badge Colors */
+.status-new { background-color: #3B82F6; }
+.status-pending { background-color: #F59E0B; }
+.status-on_hold { background-color: #EF4444; }
+.status-producing { background-color: #8B5CF6; }
+.status-shipped { background-color: #06B6D4; }
+.status-complete { background-color: #10B981; }
+.status-cancelled { background-color: #6B7280; }
+
+/* Order Status Dropdown */
+#order-status-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+#order-status-select option {
+    background-color: #1F2937;
+    color: white;
+    padding: 8px 12px;
+}
+
+/* Order Status Dropdown Colors */
+.status-new_order { background-color: #10B981; color: white; } /* Green */
+.status-producing { background-color: #F59E0B; color: white; } /* Yellow */
+.status-shipped { background-color: #3B82F6; color: white; } /* Blue */
+.status-return_to_support { background-color: #1F2937; color: white; border: 1px solid #374151; } /* Dark/Black */
+.status-cancelled { background-color: #EF4444; color: white; } /* Red */
+.status-delivered { background-color: #8B5CF6; color: white; } /* Purple */
+
+.fulfill-new { background-color: #6B7280; }
+.fulfill-in_process { background-color: #8B5CF6; }
+.fulfill-fulfilled { background-color: #10B981; }
+
+/* Collapsible Section Animation */
+.collapsible-header .transition-transform {
+    transition: transform 0.3s ease;
+}
+
+.collapsible-header[aria-expanded="true"] .transition-transform {
+    transform: rotate(90deg);
+}
+
+/* Camera Panel Collapsed State */
+#camera-panel.collapsed {
+    height: 60px;
+}
+
+#camera-panel.collapsed #camera-content {
+    display: none;
+}
+
+#camera-panel.collapsed #camera-collapse-btn {
+    transform: rotate(180deg);
+}
+
+/* Product Card - Old style */
+.product-card {
+    display: flex;
+    background-color: #374151;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 16px;
+    transition: background-color 0.2s;
+}
+
+.product-card:hover {
+    background-color: #4B5563;
+}
+
+/* Product Card - New style with 3 columns */
+.product-card-new {
+    display: flex;
+    background-color: #374151;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 24px;
+    transition: background-color 0.2s;
+    align-items: flex-start;
+}
+
+.product-card-new:hover {
+    background-color: #4B5563;
+}
+
+.product-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #1F2937;
+    flex-shrink: 0;
+}
+
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.product-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: #9CA3AF;
+}
+
+.product-sku {
+    font-size: 12px;
+    color: #6B7280;
+    font-family: monospace;
+}
+
+.design-tag {
+    display: inline-block;
+    background-color: #1F2937;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #9CA3AF;
+}
+
+/* Loading Animation */
+.loading-spinner {
+    border: 3px solid #374151;
+    border-top: 3px solid #3B82F6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-spinner-small {
+    border: 2px solid #374151;
+    border-top: 2px solid #3B82F6;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Design Preview Card */
+.design-preview-card {
+    transition: all 0.2s ease;
+}
+
+.design-preview-card:hover {
+    border-color: #3B82F6;
+    transform: scale(1.02);
+}
+
+/* Pulse animation for recording */
+.pulse-red {
+    animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Toggle Switch Enhancement */
+input[type="checkbox"]:focus + div {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Button States */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* Input Focus States */
+input:focus, select:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background-color: #111827;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Scanner Status Indicators */
+.scanner-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    background-color: #374151;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.scanner-indicator.connected {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10B981;
+}
+
+.scanner-indicator.disconnected {
+    background-color: rgba(107, 114, 128, 0.2);
+    color: #9CA3AF;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    #camera-panel {
+        width: 240px;
+    }
+    
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #camera-panel {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .grid-cols-3, .grid-cols-4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 100;
+    animation: slide-in 0.3s ease;
+}
+
+.toast.success { background-color: #10B981; }
+.toast.error { background-color: #EF4444; }
+.toast.warning { background-color: #F59E0B; }
+.toast.info { background-color: #3B82F6; }
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Upload Status Indicator */
+#upload-status-indicator {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 90;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+#upload-status-indicator.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.upload-status-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.upload-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Upload Progress Bar */
+#upload-progress-bar {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 280px;
+    background: #1F2937;
+    border-radius: 10px;
+    padding: 14px 16px;
+    z-index: 95;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+#upload-progress-bar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.progress-text {
+    color: #F3F4F6;
+}
+
+.progress-size {
+    color: #9CA3AF;
+}
+
+.progress-track {
+    height: 6px;
+    background: #374151;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10B981, #3B82F6);
+    border-radius: 3px;
+    width: 30%;
+}
+
+@keyframes indeterminate {
+    0% {
+        transform: translateX(-100%);
+        width: 50%;
+    }
+    50% {
+        transform: translateX(50%);
+        width: 50%;
+    }
+    100% {
+        transform: translateX(200%);
+        width: 50%;
+    }
+}
+
+/* Timeline Update Animation */
+@keyframes timelineFlash {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        background-color: rgba(16, 185, 129, 0.1);
+    }
+    40% {
+        box-shadow: 0 0 30px 15px rgba(16, 185, 129, 0.4);
+        background-color: rgba(16, 185, 129, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        background-color: transparent;
+    }
+}
+
+#qc-popup-timeline.timeline-updated {
+    animation: timelineFlash 1.5s ease-out forwards;
+    border-radius: 12px;
+}
+
+#qc-popup-timeline.timeline-updated > div {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Multi Order Complete Notification Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}

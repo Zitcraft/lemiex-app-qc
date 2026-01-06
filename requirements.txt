@@ -1,0 +1,29 @@
+# Lemiex Order Management App Dependencies
+
+# GUI Framework
+customtkinter>=5.2.0
+Pillow>=10.0.0
+
+# Web-based UI (Eel)
+eel>=0.16.0
+
+# API & HTTP
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Serial Communication (Scanner)
+pyserial>=3.5
+
+# Video Processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Backblaze B2 Cloud Storage
+b2sdk>=1.24.0
+
+# Configuration
+python-dotenv>=1.0.0
+PyYAML>=6.0
+
+# Utilities
+python-dateutil>=2.8.2

@@ -1,0 +1,770 @@
+2026-01-05 17:30:03,331 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-05 17:30:03,333 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-05 17:30:04,356 - __main__ - INFO - Desktop app launched with PID: 307876
+2026-01-05 17:30:05,034 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 17:30:05] "GET /index.html HTTP/1.1" 200 20185 0.002883
+2026-01-05 17:30:05,365 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 17:30:05] "GET /eel.js HTTP/1.1" 200 6665 0.005812
+2026-01-05 17:30:05,519 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 17:30:05] "GET /js/app.js HTTP/1.1" 200 98534 0.000891
+2026-01-05 17:30:05,576 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 17:30:05] "GET /css/style.css HTTP/1.1" 200 9698 0.055814
+2026-01-05 17:30:08,149 - __main__ - INFO - Auto-starting camera...
+2026-01-05 17:30:08,149 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-05 17:30:10,925 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 17:30:10,926 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 17:30:10,927 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 17:30:10,928 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 17:30:10,962 - __main__ - INFO - No scanner port detected
+2026-01-05 17:30:11,350 - __main__ - INFO - Recording limit set to: 15s
+2026-01-05 17:30:12,987 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-05 17:30:14,249 - __main__ - INFO - Found 5 printers
+2026-01-05 17:30:14,256 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 17:30:14] "GET /favicon.ico HTTP/1.1" 404 882 0.002465
+2026-01-05 17:30:14,261 - __main__ - INFO - Device states synced with frontend
+2026-01-05 17:30:15,973 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 17:32:41,171 - core.auth_manager - INFO - User logged out
+2026-01-05 17:32:41,641 - camera.camera_manager - INFO - Camera camera_0 stopped
+2026-01-05 17:32:41,641 - camera.camera_manager - INFO - Camera manager stopped
+2026-01-05 17:32:47,928 - core.auth_manager - INFO - User logged in: qc@lemiex.com
+2026-01-05 17:32:47,929 - __main__ - INFO - User logged in: qc@lemiex.com
+2026-01-05 17:32:47,929 - __main__ - INFO - Auto-starting camera...
+2026-01-05 17:32:52,396 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 17:32:52,407 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 17:32:52,407 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 17:32:52,424 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 17:32:52,569 - __main__ - INFO - No scanner port detected
+2026-01-05 17:33:08,607 - __main__ - INFO - Found 5 printers
+2026-01-05 17:33:12,344 - __main__ - INFO - Using cached label: D:\2025 Code\Lemiex-app-qc\temp_videos\label_cache_62970b2a3c6a.jpg
+2026-01-05 17:33:14,774 - __main__ - INFO - Label sent to printer: Xprinter XP-350B
+2026-01-05 17:35:20,398 - __main__ - INFO - Auto-record: disabled
+2026-01-05 17:46:10,659 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-05 17:46:10,662 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-05 17:46:10,664 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-05 17:46:10,664 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-05 17:46:10,665 - __main__ - INFO - Scanner started on COM3
+2026-01-05 19:39:16,406 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-05 19:39:16,407 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 19:39:16,409 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 19:39:16,410 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 19:39:19,804 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 19:39:19,804 - __main__ - INFO - Track result items: 2
+2026-01-05 19:39:21,786 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 19:39:21,786 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-05 19:39:23,242 - __main__ - INFO - Response status: 200
+2026-01-05 19:39:23,243 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-05 19:39:23,243 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 19:39:23,243 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 19:39:24,532 - __main__ - INFO - Response status: 200
+2026-01-05 19:39:24,615 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-05 19:39:24,622 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 19:39:24,624 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-05 19:39:26,762 - __main__ - INFO - Response status: 200
+2026-01-05 19:39:26,762 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-05 19:39:29,883 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-05 19:39:32,186 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 19:45:02,359 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1\r'
+2026-01-05 19:45:02,371 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 19:45:02,376 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 19:45:02,395 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 19:45:04,173 - __main__ - INFO - Track API response success, items count: 1
+2026-01-05 19:45:04,174 - __main__ - INFO - Track result items: 1
+2026-01-05 19:45:05,787 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 19:45:05,787 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'front', 'status': True}
+2026-01-05 19:45:06,979 - __main__ - INFO - Response status: 200
+2026-01-05 19:45:07,053 - __main__ - INFO - QC activated for item 32, position: front
+2026-01-05 19:45:07,053 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 19:45:07,063 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 19:45:08,242 - __main__ - INFO - Response status: 200
+2026-01-05 19:45:08,242 - __main__ - INFO - QC activated for item 32, position: sleeve_right
+2026-01-05 19:45:11,717 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?item_id=32
+2026-01-05 19:45:13,347 - __main__ - INFO - Track API response success, items count: 1
+2026-01-05 19:54:40,606 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 19:54:40] "GET /css/style.css HTTP/1.1" 200 9698 0.164028
+2026-01-05 19:54:40,608 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 19:54:40] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.000772
+2026-01-05 20:05:44,948 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-05 20:05:44,949 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-05 20:05:45,960 - __main__ - INFO - Desktop app launched with PID: 150064
+2026-01-05 20:05:46,580 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:05:46] "GET /index.html HTTP/1.1" 200 20185 0.000775
+2026-01-05 20:05:46,617 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:05:46] "GET /eel.js HTTP/1.1" 200 6665 0.000254
+2026-01-05 20:05:46,620 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:05:46] "GET /css/style.css HTTP/1.1" 200 9698 0.000643
+2026-01-05 20:05:46,622 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:05:46] "GET /js/app.js HTTP/1.1" 200 98588 0.000860
+2026-01-05 20:05:48,690 - __main__ - INFO - Auto-starting camera...
+2026-01-05 20:05:48,690 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-05 20:05:51,205 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:05:51,226 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 20:05:51,226 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 20:05:51,227 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 20:05:51,239 - __main__ - INFO - Found COM3: {'port': 'COM3', 'description': 'USB Serial Device (COM3)', 'hwid': 'USB VID:PID=152A:880F SER=00000000050C LOCATION=1-4'}
+2026-01-05 20:05:51,240 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-05 20:05:51,242 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-05 20:05:51,243 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-05 20:05:51,243 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-05 20:05:51,244 - __main__ - INFO - Scanner started on COM3
+2026-01-05 20:05:51,244 - __main__ - INFO - Auto-started scanner on COM3
+2026-01-05 20:05:51,641 - __main__ - INFO - Recording limit set to: 15s
+2026-01-05 20:05:53,242 - __main__ - INFO - Found 5 printers
+2026-01-05 20:05:53,246 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:05:53] "GET /favicon.ico HTTP/1.1" 404 882 0.002132
+2026-01-05 20:05:53,248 - __main__ - INFO - Device states synced with frontend
+2026-01-05 20:05:53,349 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-05 20:05:56,401 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:05:58,509 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1\r'
+2026-01-05 20:05:58,509 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 20:05:58,510 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 20:05:58,510 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?stt=1&item_id=32&item_stt=1
+2026-01-05 20:06:00,459 - __main__ - INFO - Track API response success, items count: 1
+2026-01-05 20:06:00,459 - __main__ - INFO - Track result items: 1
+2026-01-05 20:06:02,577 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4 at (1280, 720))
+2026-01-05 20:06:02,577 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4
+2026-01-05 20:06:02,577 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:06:02,578 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'front', 'status': True}
+2026-01-05 20:06:05,293 - __main__ - INFO - Response status: 200
+2026-01-05 20:06:05,294 - __main__ - INFO - QC activated for item 32, position: front
+2026-01-05 20:06:05,295 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:06:05,295 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 20:06:06,832 - __main__ - INFO - Response status: 200
+2026-01-05 20:06:06,832 - __main__ - INFO - QC activated for item 32, position: sleeve_right
+2026-01-05 20:06:09,969 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?item_id=32
+2026-01-05 20:06:12,610 - __main__ - INFO - Track API response success, items count: 1
+2026-01-05 20:06:17,514 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-05 20:06:17,514 - __main__ - INFO - Stopping QC recording for order 25
+2026-01-05 20:06:17,524 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-05 20:06:18,592 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-05 20:06:18,593 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:06:18,593 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:06:18,593 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:06:19,001 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602_h264.mp4
+2026-01-05 20:06:20,158 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4
+2026-01-05 20:06:20,159 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4
+2026-01-05 20:06:20,160 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-05 20:06:20,162 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260105_200602.mp4
+2026-01-05 20:06:20,165 - __main__ - INFO - Video API payload: order_id=25, order_item_id=32, file=qc_25_32_20260105_200602.mp4, size=1867760
+2026-01-05 20:06:21,869 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:06:21,871 - __main__ - INFO - Track result items: 2
+2026-01-05 20:06:21,872 - __main__ - WARNING - No recording to stop
+2026-01-05 20:06:23,548 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4 at (1280, 720))
+2026-01-05 20:06:23,548 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4
+2026-01-05 20:06:23,549 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:06:23,549 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-05 20:06:23,929 - __main__ - INFO - Video API response: 200
+2026-01-05 20:06:23,929 - __main__ - INFO - Video saved successfully: 
+2026-01-05 20:06:24,974 - __main__ - INFO - Response status: 200
+2026-01-05 20:06:24,974 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-05 20:06:24,975 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:06:24,975 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 20:06:26,549 - __main__ - INFO - Response status: 200
+2026-01-05 20:06:26,549 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-05 20:06:26,550 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:06:26,550 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-05 20:06:28,009 - __main__ - INFO - Response status: 200
+2026-01-05 20:06:28,011 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-05 20:06:31,566 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-05 20:06:33,680 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:06:38,681 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-05 20:06:38,681 - __main__ - INFO - Stopping QC recording for order 26
+2026-01-05 20:06:38,683 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-05 20:06:38,683 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623_h264.mp4
+2026-01-05 20:06:40,092 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4
+2026-01-05 20:06:40,092 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4
+2026-01-05 20:06:40,093 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-05 20:06:40,094 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_200623.mp4
+2026-01-05 20:06:40,095 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260105_200623.mp4, size=2444202
+2026-01-05 20:06:44,016 - __main__ - INFO - Video API response: 200
+2026-01-05 20:06:44,016 - __main__ - INFO - Video saved successfully: 
+2026-01-05 20:06:54,442 - __main__ - WARNING - No recording to stop
+2026-01-05 20:25:28,182 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-05 20:25:28,182 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-05 20:25:29,194 - __main__ - INFO - Desktop app launched with PID: 194568
+2026-01-05 20:25:29,639 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /index.html HTTP/1.1" 200 20227 0.000832
+2026-01-05 20:25:29,650 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /eel.js HTTP/1.1" 200 6665 0.000274
+2026-01-05 20:25:29,652 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /css/style.css HTTP/1.1" 200 9698 0.000850
+2026-01-05 20:25:29,654 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /js/config.js HTTP/1.1" 200 8787 0.000437
+2026-01-05 20:25:29,655 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /js/app.js HTTP/1.1" 200 99433 0.000726
+2026-01-05 20:25:29,858 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:25:29] "GET /favicon.ico HTTP/1.1" 404 882 0.002074
+2026-01-05 20:25:31,441 - __main__ - INFO - Auto-starting camera...
+2026-01-05 20:25:31,441 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-05 20:25:33,568 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:25:33,569 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 20:25:33,569 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 20:25:33,570 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 20:25:33,575 - __main__ - INFO - Found COM3: {'port': 'COM3', 'description': 'USB Serial Device (COM3)', 'hwid': 'USB VID:PID=152A:880F SER=00000000050C LOCATION=1-4'}
+2026-01-05 20:25:33,575 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-05 20:25:33,577 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-05 20:25:33,577 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-05 20:25:33,578 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-05 20:25:33,578 - __main__ - INFO - Scanner started on COM3
+2026-01-05 20:25:33,578 - __main__ - INFO - Auto-started scanner on COM3
+2026-01-05 20:25:33,943 - __main__ - INFO - Recording limit set to: 15s
+2026-01-05 20:25:34,702 - __main__ - INFO - Found 5 printers
+2026-01-05 20:25:34,703 - __main__ - INFO - Device states synced with frontend
+2026-01-05 20:25:35,515 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-05 20:25:38,168 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:25:42,141 - core.auth_manager - INFO - User logged out
+2026-01-05 20:25:42,630 - camera.camera_manager - INFO - Camera camera_0 stopped
+2026-01-05 20:25:42,630 - camera.camera_manager - INFO - Camera manager stopped
+2026-01-05 20:25:46,031 - core.auth_manager - INFO - User logged in: shipout@lemiex.com
+2026-01-05 20:25:46,032 - __main__ - INFO - User logged in: shipout@lemiex.com
+2026-01-05 20:25:46,032 - __main__ - INFO - Auto-starting camera...
+2026-01-05 20:25:48,783 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:25:48,784 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 20:25:48,784 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 20:25:48,785 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 20:25:48,791 - __main__ - INFO - Found COM3: {'port': 'COM3', 'description': 'USB Serial Device (COM3)', 'hwid': 'USB VID:PID=152A:880F SER=00000000050C LOCATION=1-4'}
+2026-01-05 20:25:48,792 - __main__ - INFO - Scanner already connected
+2026-01-05 20:25:55,911 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-05 20:25:55,912 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:25:55,912 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:25:55,913 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:25:59,461 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:25:59,462 - __main__ - INFO - Track result items: 2
+2026-01-05 20:26:01,592 - __main__ - INFO - Using cached label: D:\2025 Code\Lemiex-app-qc\temp_videos\label_cache_bdf82cdd524d.jpg
+2026-01-05 20:26:06,261 - __main__ - INFO - Label sent to printer: Xprinter XP-350B
+2026-01-05 20:26:07,725 - __main__ - INFO - Calling Shipout API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:26:07,725 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-05 20:26:08,856 - __main__ - INFO - Response status: 400
+2026-01-05 20:26:08,856 - __main__ - INFO - Response body: {"code":400,"status":false,"message":"Order must be packed before shipout. Current status: qc_pass","data":null}
+2026-01-05 20:26:08,857 - __main__ - INFO - Calling Shipout API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:26:08,857 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 20:26:10,173 - __main__ - INFO - Response status: 400
+2026-01-05 20:26:10,174 - __main__ - INFO - Response body: {"code":400,"status":false,"message":"Order must be packed before shipout. Current status: qc_pass","data":null}
+2026-01-05 20:26:10,174 - __main__ - INFO - Calling Shipout API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:26:10,174 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-05 20:26:11,334 - __main__ - INFO - Response status: 400
+2026-01-05 20:26:11,335 - __main__ - INFO - Response body: {"code":400,"status":false,"message":"Order must be packed before shipout. Current status: qc_pass","data":null}
+2026-01-05 20:26:11,335 - __main__ - INFO - Calling Shipout API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:26:11,335 - __main__ - INFO - Payload: {'item_id': 34, 'meta_key': 'front', 'status': True}
+2026-01-05 20:26:12,658 - __main__ - INFO - Response status: 400
+2026-01-05 20:26:12,659 - __main__ - INFO - Response body: {"code":400,"status":false,"message":"Order must be packed before shipout. Current status: qc_pass","data":null}
+2026-01-05 20:26:12,659 - __main__ - INFO - Shipout activated for order 26: 0/4 success
+2026-01-05 20:33:52,042 - core.auth_manager - INFO - User logged out
+2026-01-05 20:33:52,585 - camera.camera_manager - INFO - Camera camera_0 stopped
+2026-01-05 20:33:52,585 - camera.camera_manager - INFO - Camera manager stopped
+2026-01-05 20:33:58,110 - core.auth_manager - INFO - User logged in: qc@lemiex.com
+2026-01-05 20:33:58,111 - __main__ - INFO - User logged in: qc@lemiex.com
+2026-01-05 20:33:58,112 - __main__ - INFO - Auto-starting camera...
+2026-01-05 20:34:01,903 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:34:01,904 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 20:34:01,904 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 20:34:01,905 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 20:34:01,911 - __main__ - INFO - Found COM3: {'port': 'COM3', 'description': 'USB Serial Device (COM3)', 'hwid': 'USB VID:PID=152A:880F SER=00000000050C LOCATION=1-4'}
+2026-01-05 20:34:01,911 - __main__ - INFO - Scanner already connected
+2026-01-05 20:35:06,731 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-05 20:35:06,731 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:35:06,732 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:35:06,732 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:35:08,218 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:35:08,219 - __main__ - INFO - Track result items: 2
+2026-01-05 20:35:10,565 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4 at (1280, 720))
+2026-01-05 20:35:10,566 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4
+2026-01-05 20:35:10,567 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:35:10,567 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-05 20:35:11,702 - __main__ - INFO - Response status: 200
+2026-01-05 20:35:11,702 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-05 20:35:11,702 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:35:11,702 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 20:35:13,053 - __main__ - INFO - Response status: 200
+2026-01-05 20:35:13,056 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-05 20:35:13,060 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:35:13,060 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-05 20:35:14,334 - __main__ - INFO - Response status: 200
+2026-01-05 20:35:14,334 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-05 20:35:18,069 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-05 20:35:20,084 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:35:25,624 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-05 20:35:25,625 - __main__ - INFO - Stopping QC recording for order 26
+2026-01-05 20:35:25,631 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-05 20:35:25,812 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510_h264.mp4
+2026-01-05 20:35:27,554 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4
+2026-01-05 20:35:27,554 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4
+2026-01-05 20:35:27,554 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-05 20:35:27,556 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_203510.mp4
+2026-01-05 20:35:27,557 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260105_203510.mp4, size=2654091
+2026-01-05 20:35:31,711 - __main__ - INFO - Video API response: 200
+2026-01-05 20:35:31,712 - __main__ - INFO - Video saved successfully: 
+2026-01-05 20:45:55,700 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-05 20:45:55,701 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-05 20:45:56,709 - __main__ - INFO - Desktop app launched with PID: 253084
+2026-01-05 20:45:57,140 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /index.html HTTP/1.1" 200 20227 0.000926
+2026-01-05 20:45:57,148 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /eel.js HTTP/1.1" 200 6665 0.000280
+2026-01-05 20:45:57,162 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /css/style.css HTTP/1.1" 200 10370 0.011834
+2026-01-05 20:45:57,164 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /js/config.js HTTP/1.1" 200 8787 0.000571
+2026-01-05 20:45:57,165 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /js/app.js HTTP/1.1" 200 100567 0.000576
+2026-01-05 20:45:57,343 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-05 20:45:57] "GET /favicon.ico HTTP/1.1" 404 882 0.001916
+2026-01-05 20:45:58,750 - __main__ - INFO - Auto-starting camera...
+2026-01-05 20:45:58,751 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-05 20:46:01,093 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:46:01,094 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-05 20:46:01,094 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-05 20:46:01,094 - __main__ - INFO - Auto-detecting scanner...
+2026-01-05 20:46:01,100 - __main__ - INFO - Found COM3: {'port': 'COM3', 'description': 'USB Serial Device (COM3)', 'hwid': 'USB VID:PID=152A:880F SER=00000000050C LOCATION=1-4'}
+2026-01-05 20:46:01,101 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-05 20:46:01,103 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-05 20:46:01,104 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-05 20:46:01,104 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-05 20:46:01,104 - __main__ - INFO - Scanner started on COM3
+2026-01-05 20:46:01,104 - __main__ - INFO - Auto-started scanner on COM3
+2026-01-05 20:46:01,490 - __main__ - INFO - Recording limit set to: 15s
+2026-01-05 20:46:02,445 - __main__ - INFO - Found 5 printers
+2026-01-05 20:46:02,447 - __main__ - INFO - Device states synced with frontend
+2026-01-05 20:46:03,032 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-05 20:46:05,735 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-05 20:46:19,281 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-05 20:46:19,282 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:46:19,283 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:46:19,283 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-05 20:46:22,442 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:46:22,443 - __main__ - INFO - Track result items: 2
+2026-01-05 20:46:25,132 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4 at (1280, 720))
+2026-01-05 20:46:25,133 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4
+2026-01-05 20:46:25,133 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:46:25,133 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-05 20:46:26,860 - __main__ - INFO - Response status: 200
+2026-01-05 20:46:26,883 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-05 20:46:26,885 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:46:26,889 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-05 20:46:28,535 - __main__ - INFO - Response status: 200
+2026-01-05 20:46:28,536 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-05 20:46:28,536 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-05 20:46:28,536 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-05 20:46:29,680 - __main__ - INFO - Response status: 200
+2026-01-05 20:46:29,680 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-05 20:46:33,255 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-05 20:46:35,165 - __main__ - INFO - Track API response success, items count: 2
+2026-01-05 20:46:40,140 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-05 20:46:40,141 - __main__ - INFO - Stopping QC recording for order 26
+2026-01-05 20:46:40,151 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-05 20:46:40,209 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625_h264.mp4
+2026-01-05 20:46:41,593 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4
+2026-01-05 20:46:41,594 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4
+2026-01-05 20:46:41,595 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-05 20:46:41,596 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260105_204625.mp4
+2026-01-05 20:46:41,597 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260105_204625.mp4, size=2176440
+2026-01-05 20:46:45,503 - __main__ - INFO - Video API response: 200
+2026-01-05 20:46:45,503 - __main__ - INFO - Video saved successfully: 
+2026-01-05 20:47:02,839 - __main__ - WARNING - No recording to stop
+2026-01-05 21:34:43,416 - scanner.com_scanner - ERROR - Serial error on scanner_1: ClearCommError failed (PermissionError(13, 'The device does not recognize the command.', None, 22))
+2026-01-05 21:34:43,425 - scanner.com_scanner - INFO - Scanner scanner_1 disconnected
+2026-01-05 21:34:45,429 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:47,432 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:49,433 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:51,435 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:53,437 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:55,444 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:57,447 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:34:59,448 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:01,449 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:03,451 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:05,452 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:07,457 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:09,459 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:11,460 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:13,461 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:15,462 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:17,464 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:19,468 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:21,535 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:23,574 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:25,576 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:27,576 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:29,578 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:31,578 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:33,661 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:35,667 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:37,672 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:39,673 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:41,674 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:43,675 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:45,682 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:47,731 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:49,764 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:51,770 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:53,790 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:55,792 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:57,793 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:35:59,794 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:01,796 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:03,797 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:05,799 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:07,800 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:09,804 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:11,805 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:13,806 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:15,808 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:17,810 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:19,811 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:21,813 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:23,814 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:25,816 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:27,818 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:29,819 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:31,820 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:33,820 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:35,837 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:38,000 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:40,058 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:42,065 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:44,067 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:46,070 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:48,209 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:50,339 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:52,458 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:54,459 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:56,463 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:36:58,467 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:00,480 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:02,531 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:04,621 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:06,627 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:08,628 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:10,629 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:12,632 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:14,650 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:16,711 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:18,718 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:20,736 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:22,748 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:24,749 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:26,751 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:28,752 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:30,754 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:32,780 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:34,831 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:36,833 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:38,834 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:40,836 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:42,838 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:44,840 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:46,843 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:48,848 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:50,849 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:52,851 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:54,902 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:56,986 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:37:58,999 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:01,001 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:03,003 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:05,004 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:07,006 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:09,008 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:11,053 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:13,099 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:15,169 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:17,169 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:19,228 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:21,233 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:23,233 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:25,238 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:27,246 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:29,251 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:31,253 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:33,254 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:35,259 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:37,260 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:39,261 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:41,262 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:43,264 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:45,266 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:47,268 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:49,271 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:51,272 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:53,404 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:55,411 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:57,412 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:38:59,414 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:01,415 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:03,416 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:05,417 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:07,419 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:09,420 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:11,421 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:13,422 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:15,423 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:17,424 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:19,430 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:21,432 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:23,433 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:25,434 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:27,436 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:29,438 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:31,439 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:33,442 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:35,443 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:37,445 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:39,487 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:41,515 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:43,516 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:45,518 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:47,519 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:49,521 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:51,531 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:53,578 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:55,589 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:57,595 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:39:59,596 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:01,597 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:03,598 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:05,599 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:07,601 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:09,608 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:11,628 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:13,636 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:15,637 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:17,638 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:19,740 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:21,765 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:23,791 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:25,795 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:27,797 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:29,800 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:31,802 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:33,824 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:35,840 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:37,843 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:39,848 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:41,858 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:43,860 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:45,863 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:47,888 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:49,952 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:51,976 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:53,978 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:55,979 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:57,980 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:40:59,981 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:01,988 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:03,993 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:05,995 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:07,996 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:09,999 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:12,001 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:14,010 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:16,108 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:18,122 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:20,124 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:22,125 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:24,127 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:26,128 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:28,259 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:30,267 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:32,268 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:34,270 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:36,272 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:38,273 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:40,300 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:42,320 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:44,341 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:46,342 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:48,343 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:50,345 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:52,438 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:54,854 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:57,120 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:41:59,122 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:01,123 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:03,124 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:05,126 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:07,218 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:09,222 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:11,224 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:13,226 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:15,227 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:17,228 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:19,229 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:21,313 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:23,315 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:25,317 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:27,317 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:29,318 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:31,320 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:33,328 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:35,336 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:37,342 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:39,344 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:41,345 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:43,351 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:45,353 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:47,398 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:49,414 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:51,416 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:53,417 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:55,476 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:57,478 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:42:59,479 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:01,481 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:03,482 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:05,491 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:07,492 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:09,493 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:11,526 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:13,592 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:15,607 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:17,608 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:19,609 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:21,612 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:23,613 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:25,614 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:27,616 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:29,617 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:31,622 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:33,624 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:35,626 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:37,627 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:39,629 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:41,632 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:43,633 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:45,653 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:47,667 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:49,740 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:51,744 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:53,746 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:55,749 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:57,750 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:43:59,751 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:01,753 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:03,753 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:05,755 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:07,756 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:09,757 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:11,759 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:13,760 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:15,761 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:17,762 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:19,763 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:21,764 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:23,766 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:25,766 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:27,767 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:29,773 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:31,774 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:33,775 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:35,776 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:37,777 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:39,778 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:41,819 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:43,830 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:45,832 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:47,835 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:49,838 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:51,839 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:53,849 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:55,863 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:57,865 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:44:59,866 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:01,868 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:03,869 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:05,871 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:07,874 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:09,877 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:11,878 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:13,879 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:15,881 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:17,884 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:19,885 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:21,912 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:23,915 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:25,917 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:27,918 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:29,919 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:31,920 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:33,921 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:35,925 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:37,927 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:39,930 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:41,940 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:43,941 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:45,942 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:47,944 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:49,945 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:51,947 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:53,951 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:55,953 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:57,954 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:45:59,955 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:01,957 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:03,962 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:05,963 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:07,964 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:09,967 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:11,969 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:13,970 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:15,971 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:17,973 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:19,975 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:21,977 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:23,978 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:25,979 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:27,981 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:29,983 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:31,984 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:33,985 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:36,011 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:38,013 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:40,015 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:42,017 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:44,018 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:46,019 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:48,021 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:50,028 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:52,036 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:54,041 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:56,044 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:46:58,050 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:00,131 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:02,181 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:04,291 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:06,316 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:08,318 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:10,321 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:12,323 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:14,343 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:16,422 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:18,447 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:20,481 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:22,482 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:24,488 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:26,489 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:28,498 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:30,517 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:32,518 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:34,519 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:36,521 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:38,522 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:40,586 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:42,591 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:44,595 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:46,596 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:48,598 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:50,600 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:52,602 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:54,607 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:56,613 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:47:58,614 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:00,616 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:02,617 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:04,619 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:06,620 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:08,622 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:10,623 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:12,624 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:14,626 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:16,628 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:18,738 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:20,973 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:23,017 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:25,019 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:27,020 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:29,021 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:31,022 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:33,023 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:35,025 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:37,028 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:39,028 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:41,033 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:43,044 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:45,046 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:47,047 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:49,049 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:51,057 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:53,059 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:55,060 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:57,061 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:48:59,129 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:49:01,146 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:49:03,147 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:49:05,148 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:49:07,149 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2026-01-05 21:49:09,150 - scanner.com_scanner - ERROR - Không thể kết nối COM3: could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)

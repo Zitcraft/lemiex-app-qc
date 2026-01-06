@@ -1,0 +1,285 @@
+2026-01-06 00:37:32,137 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-06 00:37:32,138 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-06 00:37:33,149 - __main__ - INFO - Desktop app launched with PID: 81364
+2026-01-06 00:37:33,770 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:33] "GET /index.html HTTP/1.1" 200 20227 0.001321
+2026-01-06 00:37:33,782 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:33] "GET /eel.js HTTP/1.1" 200 6665 0.000255
+2026-01-06 00:37:33,801 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:33] "GET /css/style.css HTTP/1.1" 200 10370 0.016411
+2026-01-06 00:37:33,804 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:33] "GET /js/config.js HTTP/1.1" 200 8787 0.000555
+2026-01-06 00:37:33,814 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:33] "GET /js/app.js HTTP/1.1" 200 100567 0.000706
+2026-01-06 00:37:35,919 - __main__ - INFO - Auto-starting camera...
+2026-01-06 00:37:35,919 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-06 00:37:38,223 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-06 00:37:38,224 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-06 00:37:38,224 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-06 00:37:38,225 - __main__ - INFO - Auto-detecting scanner...
+2026-01-06 00:37:38,239 - __main__ - INFO - No scanner port detected
+2026-01-06 00:37:39,025 - __main__ - INFO - Recording limit set to: 15s
+2026-01-06 00:37:40,169 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-06 00:37:42,379 - __main__ - INFO - Found 5 printers
+2026-01-06 00:37:42,383 - __main__ - INFO - Device states synced with frontend
+2026-01-06 00:37:42,392 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 00:37:42] "GET /favicon.ico HTTP/1.1" 404 882 0.002904
+2026-01-06 00:37:43,121 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-06 00:39:06,813 - services.order_service - INFO - Order loaded: #25 (ref: emb1515_577124192714396541)
+2026-01-06 00:39:06,813 - activity - INFO - [order_view] Order viewed: #25 (ref: emb1515_577124192714396541)
+2026-01-06 00:39:07,012 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_003906.mp4 at (1280, 720))
+2026-01-06 00:39:07,012 - services.recording_service - INFO - Recording started: 25 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_003906.mp4
+2026-01-06 00:39:07,013 - __main__ - INFO - Recording started for order: RecordingSession(id='9817671c-caa9-437f-af6d-68c05a001958', order_id='25', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2026, 1, 6, 0, 39, 7, 12857), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_25_20260106_003906.mp4'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:39:22,211 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:39:22,216 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:39:23,498 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_003906.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_003906_h264.mp4
+2026-01-06 00:39:25,043 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_003906.mp4
+2026-01-06 00:39:25,044 - services.recording_service - INFO - Recording stopped: 25, duration: 18.0s
+2026-01-06 00:39:25,044 - __main__ - INFO - Recording stopped: RecordingSession(id='9817671c-caa9-437f-af6d-68c05a001958', order_id='25', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2026, 1, 6, 0, 39, 7, 12857), end_time=datetime.datetime(2026, 1, 6, 0, 39, 25, 44298), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_25_20260106_003906.mp4'), file_size=0, duration_seconds=18.031441, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:39:25,045 - services.recording_service - WARNING - B2 uploader not configured
+2026-01-06 00:39:40,302 - services.order_service - INFO - Order loaded: #19 (ref: emb8033_577199961819681126)
+2026-01-06 00:39:40,303 - activity - INFO - [order_view] Order viewed: #19 (ref: emb8033_577199961819681126)
+2026-01-06 00:39:40,318 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20260106_003940.mp4 at (1280, 720))
+2026-01-06 00:39:40,318 - services.recording_service - INFO - Recording started: 19 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20260106_003940.mp4
+2026-01-06 00:39:40,319 - __main__ - INFO - Recording started for order: RecordingSession(id='666e85da-d8ab-4ef0-9f54-50aff93d493f', order_id='19', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2026, 1, 6, 0, 39, 40, 318828), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20260106_003940.mp4'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:39:55,335 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:39:55,339 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:39:55,344 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20260106_003940.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20260106_003940_h264.mp4
+2026-01-06 00:40:11,672 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\order_19_20260106_003940.mp4
+2026-01-06 00:40:11,677 - services.recording_service - INFO - Recording stopped: 19, duration: 31.4s
+2026-01-06 00:40:11,677 - __main__ - INFO - Recording stopped: RecordingSession(id='666e85da-d8ab-4ef0-9f54-50aff93d493f', order_id='19', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2026, 1, 6, 0, 39, 40, 318828), end_time=datetime.datetime(2026, 1, 6, 0, 40, 11, 677221), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_19_20260106_003940.mp4'), file_size=0, duration_seconds=31.358393, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:40:11,678 - services.recording_service - WARNING - B2 uploader not configured
+2026-01-06 00:41:16,766 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-06 00:41:16,775 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-06 00:41:16,777 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-06 00:41:16,778 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-06 00:41:16,778 - __main__ - INFO - Scanner started on COM3
+2026-01-06 00:41:20,309 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-06 00:41:20,309 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:41:20,310 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:41:20,310 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:41:23,342 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:41:23,342 - __main__ - INFO - Track result items: 2
+2026-01-06 00:41:25,240 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4 at (1280, 720))
+2026-01-06 00:41:25,241 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4
+2026-01-06 00:41:25,241 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:41:25,241 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-06 00:41:26,841 - __main__ - INFO - Response status: 200
+2026-01-06 00:41:26,842 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-06 00:41:26,842 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:41:26,842 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-06 00:41:28,589 - __main__ - INFO - Response status: 200
+2026-01-06 00:41:28,589 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-06 00:41:28,590 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:41:28,590 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-06 00:41:30,049 - __main__ - INFO - Response status: 200
+2026-01-06 00:41:30,050 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-06 00:41:33,464 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-06 00:41:35,479 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:41:40,246 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:41:40,246 - __main__ - INFO - Stopping QC recording for order 26
+2026-01-06 00:41:40,248 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:41:40,249 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125_h264.mp4
+2026-01-06 00:41:41,830 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4
+2026-01-06 00:41:41,831 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4
+2026-01-06 00:41:41,831 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 00:41:41,833 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004125.mp4
+2026-01-06 00:41:41,834 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260106_004125.mp4, size=3250071
+2026-01-06 00:41:46,280 - __main__ - INFO - Video API response: 200
+2026-01-06 00:41:46,281 - __main__ - INFO - Video saved successfully: 
+2026-01-06 00:41:49,787 - __main__ - WARNING - No recording to stop
+2026-01-06 00:41:59,740 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-06 00:41:59,740 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:41:59,741 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:41:59,741 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 00:42:05,472 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:42:05,472 - __main__ - INFO - Track result items: 2
+2026-01-06 00:42:07,395 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4 at (1280, 720))
+2026-01-06 00:42:07,396 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4
+2026-01-06 00:42:07,396 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:07,397 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-06 00:42:08,860 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:08,861 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-06 00:42:08,861 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:08,861 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-06 00:42:10,263 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:10,272 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-06 00:42:10,272 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:10,273 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-06 00:42:10,710 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=2&item_id=34&item_stt=2\r'
+2026-01-06 00:42:10,710 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=2&item_id=34&item_stt=2
+2026-01-06 00:42:10,710 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=2&item_id=34&item_stt=2
+2026-01-06 00:42:10,710 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=2&item_id=34&item_stt=2
+2026-01-06 00:42:11,621 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:11,621 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-06 00:42:12,546 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:42:12,546 - __main__ - INFO - Track result items: 2
+2026-01-06 00:42:15,156 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-06 00:42:17,042 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:42:17,067 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:42:17,084 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207_h264.mp4
+2026-01-06 00:42:18,300 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4
+2026-01-06 00:42:18,300 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4
+2026-01-06 00:42:18,300 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 00:42:18,301 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_004207.mp4
+2026-01-06 00:42:18,303 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260106_004207.mp4, size=1851256
+2026-01-06 00:42:20,602 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4 at (1280, 720))
+2026-01-06 00:42:20,602 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4
+2026-01-06 00:42:20,603 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:20,603 - __main__ - INFO - Payload: {'item_id': 34, 'meta_key': 'front', 'status': True}
+2026-01-06 00:42:21,753 - __main__ - INFO - Video API response: 200
+2026-01-06 00:42:21,753 - __main__ - INFO - Video saved successfully: 
+2026-01-06 00:42:22,179 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:22,180 - __main__ - INFO - QC activated for item 34, position: front
+2026-01-06 00:42:31,355 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=34
+2026-01-06 00:42:33,246 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 00:42:35,621 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:42:35,621 - __main__ - INFO - Stopping QC recording for order 26
+2026-01-06 00:42:35,624 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:42:35,624 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220_h264.mp4
+2026-01-06 00:42:37,565 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4
+2026-01-06 00:42:37,565 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4
+2026-01-06 00:42:37,566 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 00:42:37,567 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_34_20260106_004220.mp4
+2026-01-06 00:42:37,568 - __main__ - INFO - Video API payload: order_id=26, order_item_id=34, file=qc_26_34_20260106_004220.mp4, size=3852854
+2026-01-06 00:42:41,226 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1\r'
+2026-01-06 00:42:41,234 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-06 00:42:41,302 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/25?stt=1&item_id=32&item_stt=1
+2026-01-06 00:42:41,343 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?stt=1&item_id=32&item_stt=1
+2026-01-06 00:42:44,247 - __main__ - INFO - Track API response success, items count: 1
+2026-01-06 00:42:44,247 - __main__ - INFO - Track result items: 1
+2026-01-06 00:42:44,862 - __main__ - INFO - Video API response: 200
+2026-01-06 00:42:44,862 - __main__ - INFO - Video saved successfully: 
+2026-01-06 00:42:48,737 - __main__ - WARNING - No recording to stop
+2026-01-06 00:42:50,666 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4 at (1280, 720))
+2026-01-06 00:42:50,666 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4
+2026-01-06 00:42:50,666 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:50,666 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'front', 'status': True}
+2026-01-06 00:42:52,463 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:52,463 - __main__ - INFO - QC activated for item 32, position: front
+2026-01-06 00:42:52,464 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 00:42:52,464 - __main__ - INFO - Payload: {'item_id': 32, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-06 00:42:55,443 - __main__ - INFO - Response status: 200
+2026-01-06 00:42:55,454 - __main__ - INFO - QC activated for item 32, position: sleeve_right
+2026-01-06 00:43:04,094 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/25?item_id=32
+2026-01-06 00:43:05,843 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:43:05,845 - __main__ - INFO - Stopping QC recording for order 25
+2026-01-06 00:43:05,847 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:43:05,848 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250_h264.mp4
+2026-01-06 00:43:05,904 - __main__ - INFO - Track API response success, items count: 1
+2026-01-06 00:43:07,453 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4
+2026-01-06 00:43:07,454 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4
+2026-01-06 00:43:07,454 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 00:43:07,456 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_25_32_20260106_004250.mp4
+2026-01-06 00:43:07,457 - __main__ - INFO - Video API payload: order_id=25, order_item_id=32, file=qc_25_32_20260106_004250.mp4, size=3018885
+2026-01-06 00:43:10,286 - __main__ - WARNING - No recording to stop
+2026-01-06 00:43:11,885 - __main__ - INFO - Video API response: 200
+2026-01-06 00:43:11,885 - __main__ - INFO - Video saved successfully: 
+2026-01-06 00:43:13,482 - services.order_service - INFO - Order loaded: #25 (ref: emb1515_577124192714396541)
+2026-01-06 00:43:13,483 - activity - INFO - [order_view] Order viewed: #25 (ref: emb1515_577124192714396541)
+2026-01-06 00:43:13,499 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_004313.mp4 at (1280, 720))
+2026-01-06 00:43:13,500 - services.recording_service - INFO - Recording started: 25 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_004313.mp4
+2026-01-06 00:43:13,501 - __main__ - INFO - Recording started for order: RecordingSession(id='e8b66666-f40c-42ba-93e7-7111e1fad063', order_id='25', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2026, 1, 6, 0, 43, 13, 500909), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_25_20260106_004313.mp4'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:43:28,508 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 00:43:28,510 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:43:28,511 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_004313.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_004313_h264.mp4
+2026-01-06 00:43:29,963 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\order_25_20260106_004313.mp4
+2026-01-06 00:43:29,964 - services.recording_service - INFO - Recording stopped: 25, duration: 16.5s
+2026-01-06 00:43:29,964 - __main__ - INFO - Recording stopped: RecordingSession(id='e8b66666-f40c-42ba-93e7-7111e1fad063', order_id='25', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2026, 1, 6, 0, 43, 13, 500909), end_time=datetime.datetime(2026, 1, 6, 0, 43, 29, 964217), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_25_20260106_004313.mp4'), file_size=0, duration_seconds=16.463308, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:43:29,964 - services.recording_service - WARNING - B2 uploader not configured
+2026-01-06 00:43:54,484 - services.order_service - INFO - Order loaded: #26 (ref: emb3662_577150584523887382)
+2026-01-06 00:43:54,584 - activity - INFO - [order_view] Order viewed: #26 (ref: emb3662_577150584523887382)
+2026-01-06 00:43:54,615 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\order_26_20260106_004354.mp4 at (1280, 720))
+2026-01-06 00:43:54,616 - services.recording_service - INFO - Recording started: 26 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_26_20260106_004354.mp4
+2026-01-06 00:43:54,617 - __main__ - INFO - Recording started for order: RecordingSession(id='9c2c5176-41d0-479a-8455-90e922d34d7f', order_id='26', camera_id='camera_0', status=<RecordingStatus.RECORDING: 'recording'>, start_time=datetime.datetime(2026, 1, 6, 0, 43, 54, 616534), end_time=None, file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_26_20260106_004354.mp4'), file_size=0, duration_seconds=0.0, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:44:06,614 - services.order_service - INFO - Order loaded: #26 (ref: emb3662_577150584523887382)
+2026-01-06 00:44:06,691 - activity - INFO - [order_view] Order viewed: #26 (ref: emb3662_577150584523887382)
+2026-01-06 00:44:06,703 - services.recording_service - INFO - Same order scanned, stopping recording: 26
+2026-01-06 00:44:06,722 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 00:44:06,722 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\order_26_20260106_004354.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\order_26_20260106_004354_h264.mp4
+2026-01-06 00:44:07,903 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\order_26_20260106_004354.mp4
+2026-01-06 00:44:07,903 - services.recording_service - INFO - Recording stopped: 26, duration: 13.3s
+2026-01-06 00:44:07,904 - __main__ - INFO - Recording stopped: RecordingSession(id='9c2c5176-41d0-479a-8455-90e922d34d7f', order_id='26', camera_id='camera_0', status=<RecordingStatus.PROCESSING: 'processing'>, start_time=datetime.datetime(2026, 1, 6, 0, 43, 54, 616534), end_time=datetime.datetime(2026, 1, 6, 0, 44, 7, 903844), file_path=WindowsPath('D:/2025 Code/Lemiex-app-qc/temp_videos/order_26_20260106_004354.mp4'), file_size=0, duration_seconds=13.28731, upload_url='', upload_progress=0.0, error_message='', retry_count=0)
+2026-01-06 00:44:07,904 - services.recording_service - WARNING - B2 uploader not configured
+2026-01-06 00:44:21,769 - __main__ - INFO - Recording limit reached: 15s >= 15s
+2026-01-06 23:11:10,322 - __main__ - INFO - Starting Lemiex Order Manager (Eel UI)
+2026-01-06 23:11:10,322 - __main__ - INFO - Starting as QC instance on port 8081
+2026-01-06 23:11:10,324 - __main__ - INFO - Starting as desktop app using Edge
+2026-01-06 23:11:10,325 - __main__ - INFO - Using separate profile for QC: C:\Users\LOI\AppData\Local\Temp\LemiexQC_QC
+2026-01-06 23:11:11,339 - __main__ - INFO - Desktop app (QC) launched with PID: 553764
+2026-01-06 23:11:12,443 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:12] "GET /index.html HTTP/1.1" 200 20227 0.001070
+2026-01-06 23:11:12,449 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:12] "GET /eel.js HTTP/1.1" 200 6665 0.000430
+2026-01-06 23:11:12,464 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:12] "GET /css/style.css HTTP/1.1" 200 10946 0.014102
+2026-01-06 23:11:12,465 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:12] "GET /js/config.js HTTP/1.1" 200 8787 0.000511
+2026-01-06 23:11:12,467 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:12] "GET /js/app.js HTTP/1.1" 200 104407 0.000592
+2026-01-06 23:11:14,584 - __main__ - INFO - Auto-starting camera...
+2026-01-06 23:11:14,584 - camera.camera_manager - INFO - Camera added: camera_0
+2026-01-06 23:11:18,534 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-06 23:11:18,534 - camera.camera_manager - INFO - Camera camera_0 started
+2026-01-06 23:11:18,534 - camera.camera_manager - INFO - Camera manager started with 1 cameras
+2026-01-06 23:11:18,535 - __main__ - INFO - Auto-detecting scanner...
+2026-01-06 23:11:18,549 - __main__ - INFO - No scanner port detected
+2026-01-06 23:11:20,469 - camera.camera_manager - WARNING - Camera camera_0 too many failures, reconnecting...
+2026-01-06 23:11:21,082 - __main__ - INFO - Found 5 printers
+2026-01-06 23:11:21,085 - __main__ - INFO - Device states synced with frontend
+2026-01-06 23:11:21,090 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-01-06 23:11:21] "GET /favicon.ico HTTP/1.1" 404 882 0.002476
+2026-01-06 23:11:23,774 - camera.camera_manager - INFO - Camera camera_0 connected
+2026-01-06 23:11:29,065 - scanner.scanner_manager - INFO - Scanner added: scanner_1 on COM3
+2026-01-06 23:11:29,067 - scanner.com_scanner - INFO - Scanner scanner_1 connected on COM3
+2026-01-06 23:11:29,068 - scanner.com_scanner - INFO - Scanner scanner_1 reading thread started
+2026-01-06 23:11:29,069 - scanner.scanner_manager - INFO - Scanner manager started with 1 scanners
+2026-01-06 23:11:29,069 - __main__ - INFO - Scanner started on COM3
+2026-01-06 23:13:06,537 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-06 23:13:06,538 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:06,575 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:06,575 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:09,865 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 23:13:09,865 - __main__ - INFO - Track result items: 2
+2026-01-06 23:13:11,894 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4 at (1280, 720))
+2026-01-06 23:13:11,895 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4
+2026-01-06 23:13:11,896 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:11,896 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-06 23:13:13,372 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:13,372 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-06 23:13:13,372 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:13,372 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-06 23:13:14,795 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:14,796 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-06 23:13:14,796 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:14,796 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-06 23:13:16,203 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:16,203 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-06 23:13:19,659 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-06 23:13:21,338 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 23:13:40,336 - scanner.com_scanner - INFO - Decoded text from scanner_1: 'https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1\r'
+2026-01-06 23:13:40,337 - scanner.com_scanner - INFO - Scanner scanner_1 scan: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:40,337 - __main__ - INFO - Scan received: https://manage.lemiex.us/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:40,337 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?stt=1&item_id=33&item_stt=1
+2026-01-06 23:13:42,227 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 23:13:42,227 - __main__ - INFO - Track result items: 2
+2026-01-06 23:13:42,233 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 23:13:42,817 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311_h264.mp4
+2026-01-06 23:13:45,038 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4
+2026-01-06 23:13:45,039 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4
+2026-01-06 23:13:45,039 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 23:13:45,040 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231311.mp4
+2026-01-06 23:13:45,043 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260106_231311.mp4, size=7455059
+2026-01-06 23:13:46,995 - camera.camera_manager - INFO - Camera camera_0 started recording: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4 at (1280, 720))
+2026-01-06 23:13:46,996 - __main__ - INFO - QC recording started: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4
+2026-01-06 23:13:46,996 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:46,996 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'front', 'status': True}
+2026-01-06 23:13:48,568 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:48,568 - __main__ - INFO - QC activated for item 33, position: front
+2026-01-06 23:13:48,568 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:48,569 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_right', 'status': True}
+2026-01-06 23:13:49,861 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:49,861 - __main__ - INFO - QC activated for item 33, position: sleeve_right
+2026-01-06 23:13:49,861 - __main__ - INFO - Calling QC API: PUT https://manage.lemiex.us/api/orders/change-status-items
+2026-01-06 23:13:49,862 - __main__ - INFO - Payload: {'item_id': 33, 'meta_key': 'sleeve_left', 'status': True}
+2026-01-06 23:13:51,064 - __main__ - INFO - Response status: 200
+2026-01-06 23:13:51,064 - __main__ - INFO - QC activated for item 33, position: sleeve_left
+2026-01-06 23:13:53,998 - __main__ - INFO - Calling track API: https://manage.lemiex.us/api/orders/track/26?item_id=33
+2026-01-06 23:13:56,007 - __main__ - INFO - Video API response: 200
+2026-01-06 23:13:56,007 - __main__ - INFO - Video saved successfully: 
+2026-01-06 23:13:56,522 - __main__ - INFO - Track API response success, items count: 2
+2026-01-06 23:15:49,882 - camera.camera_manager - INFO - Camera camera_0 stopped recording
+2026-01-06 23:15:49,883 - camera.camera_manager - INFO - Converting video to H.264: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4 -> D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346_h264.mp4
+2026-01-06 23:16:16,552 - camera.camera_manager - INFO - Video converted successfully: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4
+2026-01-06 23:16:16,552 - __main__ - INFO - QC recording stopped: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4
+2026-01-06 23:16:16,552 - __main__ - INFO - Video queued for upload. Queue size: 1
+2026-01-06 23:16:16,694 - __main__ - INFO - Uploading video to API: D:\2025 Code\Lemiex-app-qc\temp_videos\qc_26_33_20260106_231346.mp4
+2026-01-06 23:16:16,695 - __main__ - INFO - Video API payload: order_id=26, order_item_id=33, file=qc_26_33_20260106_231346.mp4, size=43595561

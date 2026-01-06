@@ -1,0 +1,41 @@
+# Lemiex Order Management App - Local Configuration
+
+# Scanner Configuration
+scanners:
+  - id: scanner_1
+    com_port: COM3
+    baud_rate: 9600
+    enabled: true
+  - id: scanner_2
+    com_port: COM4
+    baud_rate: 9600
+    enabled: false
+
+# Camera Configuration
+cameras:
+  - id: camera_0
+    device_index: 0
+    resolution: [1280, 720]
+    fps: 30
+    enabled: true
+  - id: camera_1
+    device_index: 1
+    resolution: [1280, 720]
+    fps: 30
+    enabled: false
+
+# Recording Settings
+recording:
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+  timestamp_position: "top-left"
+  video_codec: "mp4v"
+  auto_upload: true
+  delete_after_upload: true
+  temp_directory: "temp_videos"
+
+# UI Settings
+ui:
+  theme: "dark"
+  language: "vi"
+  window_size: [1400, 900]
+  camera_preview_size: [640, 360]
