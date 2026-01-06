@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/*.log
+*.log
+
+# Temp files
+temp_videos/*.mp4
+temp_videos/*.jpg
+temp_videos/*.png
+!temp_videos/.gitkeep
+
+# Recordings
+recordings/
+*.mp4
+
+# Auth tokens (sensitive)
+auth_token.json
+
+# Label cache
+label_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+backup/
+
+# DLL files (user should download separately)
+*.dll
+*.dll.bz2
