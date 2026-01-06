@@ -22,12 +22,21 @@ INCLUDE_FOLDERS = [
     "web",
     "config", 
     "updater",
+    "core",       # API client, auth manager
+    "models",     # Data models
+    "services",   # Order service, B2 uploader, etc.
+    "scanner",    # QR scanner
+    "camera",     # Camera/video recording
+    "logs",       # Keep logs folder structure
+    "temp_videos", # Temp folder for videos
+    "qr_codes",   # QR code images
 ]
 
 INCLUDE_FILES = [
     "app_eel.py",
     "version.json",
     "requirements.txt",
+    ".env.example",  # Example env file
 ]
 
 # Files to exclude
