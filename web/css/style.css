@@ -18,6 +18,34 @@
     background: #6B7280;
 }
 
+/* Variant Badges - Product Style/Color/Size */
+.variant-badge {
+    transition: all 0.2s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.variant-badge:hover {
+    transform: scale(1.02);
+}
+
+.variant-style {
+    background: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);
+    border-color: #C084FC;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+}
+
+.variant-color {
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+    border-color: #60A5FA;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.variant-size {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    border-color: #34D399;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
+}
+
 /* Status Badge Colors */
 .status-new { background-color: #3B82F6; }
 .status-pending { background-color: #F59E0B; }

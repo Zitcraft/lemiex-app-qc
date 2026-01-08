@@ -22,6 +22,100 @@ let recordingItemId = null;
 let uploadQueue = [];
 let isUploading = false;
 
+// ===== Color Image Cache =====
+const colorImageCache = new Map(); // Cache validated color image URLs
+
+/**
+ * Try to find a working color image URL from color_images array or color_image
+ * @param {Object} product - Product object with color_image and color_images
+ * @returns {Promise<string>} - Working image URL or empty string
+ */
+async function getValidColorImage(product) {
+    if (!product) return '';
+    
+    // Build list of URLs to try
+    const urlsToTry = [];
+    
+    // Add color_images array first (usually has multiple options)
+    if (product.color_images && Array.isArray(product.color_images)) {
+        urlsToTry.push(...product.color_images);
+    }
+    
+    // Add single color_image as fallback
+    if (product.color_image) {
+        urlsToTry.push(product.color_image);
+    }
+    
+    if (urlsToTry.length === 0) return '';
+    
+    // Check cache first
+    const cacheKey = urlsToTry.join('|');
+    if (colorImageCache.has(cacheKey)) {
+        return colorImageCache.get(cacheKey);
+    }
+    
+    // Try each URL
+    for (const url of urlsToTry) {
+        if (!url) continue;
+        
+        try {
+            const isValid = await checkImageExists(url);
+            if (isValid) {
+                colorImageCache.set(cacheKey, url);
+                console.log('Valid color image found:', url);
+                return url;
+            }
+        } catch (e) {
+            // Continue to next URL
+        }
+    }
+    
+    // No valid image found
+    colorImageCache.set(cacheKey, '');
+    return '';
+}
+
+/**
+ * Check if an image URL exists and is loadable
+ * @param {string} url - Image URL to check
+ * @returns {Promise<boolean>}
+ */
+function checkImageExists(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+        
+        // Timeout after 5 seconds
+        setTimeout(() => resolve(false), 5000);
+    });
+}
+
+/**
+ * Load color image into an element, trying multiple URLs
+ * @param {HTMLElement} imgElement - Image element to update
+ * @param {Object} product - Product object
+ * @param {string} fallbackText - Text to show if no image
+ */
+async function loadColorImage(imgElement, product, fallbackText = 'No preview') {
+    if (!imgElement || !product) return;
+    
+    const validUrl = await getValidColorImage(product);
+    
+    if (validUrl) {
+        imgElement.src = validUrl;
+        imgElement.style.display = '';
+    } else {
+        // Hide image and show placeholder
+        imgElement.style.display = 'none';
+        const placeholder = imgElement.parentElement?.querySelector('.color-image-placeholder');
+        if (placeholder) {
+            placeholder.style.display = 'flex';
+        }
+    }
+}
+
 // ===== Eel Exposed Functions (called from Python) =====
 eel.expose(onLoginSuccess);
 function onLoginSuccess(userData) {
@@ -648,26 +742,35 @@ function displayOrder(order) {
         return;
     }
 
-    container.innerHTML = items.map(item => `
-        <div class="product-card-new">
+    container.innerHTML = items.map((item, index) => {
+        const product = item.product || {};
+        const productName = product.product_name || item.product_name || 'Unknown Product';
+        const style = product.style || item.style || '';
+        const color = product.color || item.color || '';
+        const size = product.size || item.size || '';
+        
+        return `
+        <div class="product-card-new" data-item-index="${index}">
             <!-- Left: Color Image -->
-            <div class="flex flex-col gap-3 items-center">
-                ${item.color_image ? `
-                    <img src="${item.color_image}" alt="${item.color}" 
-                         class="w-60 h-60 rounded-lg object-cover border-2 border-gray-600"
-                         onerror="this.style.display='none'">
-                ` : ''}
+            <div class="flex flex-col gap-3 items-center color-image-container">
+                <img class="color-image w-60 h-60 rounded-lg object-cover border-2 border-gray-600" 
+                     alt="${color}" 
+                     style="display: none;"
+                     onerror="this.style.display='none'">
+                <div class="color-image-placeholder w-60 h-60 rounded-lg bg-gray-800 flex items-center justify-center border-2 border-gray-600">
+                    <div class="loading-spinner-small"></div>
+                </div>
             </div>
             
             <!-- Middle: Product Info -->
             <div class="flex-1 flex flex-col gap-3">
-                <div class="text-lg font-bold text-white">${item.product_name || 'Unknown Product'}</div>
+                <div class="text-lg font-bold text-white">${productName}</div>
                 
-                <!-- Product variant info - PROMINENT -->
+                <!-- Product variant info - PROMINENT with styled borders -->
                 <div class="flex flex-wrap gap-3">
-                    ${item.style ? `<span class="px-4 py-2 bg-purple-600 rounded-lg text-white font-bold text-base">📦 ${item.style}</span>` : ''}
-                    ${item.color ? `<span class="px-4 py-2 bg-blue-600 rounded-lg text-white font-bold text-base">🎨 ${item.color}</span>` : ''}
-                    ${item.size ? `<span class="px-4 py-2 bg-green-600 rounded-lg text-white font-bold text-base">📏 ${item.size}</span>` : ''}
+                    ${style ? `<span class="variant-badge variant-style px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-purple-400 bg-purple-600/80">📦 ${style}</span>` : ''}
+                    ${color ? `<span class="variant-badge variant-color px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-blue-400 bg-blue-600/80">🎨 ${color}</span>` : ''}
+                    ${size ? `<span class="variant-badge variant-size px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-green-400 bg-green-600/80">📏 ${size}</span>` : ''}
                 </div>
                 
                 <div class="flex gap-4 text-sm text-gray-400">
@@ -683,7 +786,7 @@ function displayOrder(order) {
             <!-- Middle: Mockup Image -->
             <div class="flex flex-col gap-3">
                 <img src="${item.mockup || 'https://via.placeholder.com/120'}" 
-                     alt="${item.product_name}" class="w-60 h-60 rounded-lg object-cover bg-gray-900"
+                     alt="${productName}" class="w-60 h-60 rounded-lg object-cover bg-gray-900"
                      onerror="this.src='https://via.placeholder.com/120?text=No+Image'">
             </div>
             
@@ -711,10 +814,53 @@ function displayOrder(order) {
                 ` : '<div class="text-gray-500 text-sm">No designs</div>'}
             </div>
         </div>
-    `).join('');
+    `}).join('');
+    
+    // Load color images async for each item
+    loadColorImagesForItems(items);
     
     // Load design previews from json_url
     loadDesignPreviews();
+}
+
+/**
+ * Load color images for all items in the list
+ * Tries multiple URLs from color_images array until one works
+ */
+async function loadColorImagesForItems(items) {
+    const cards = document.querySelectorAll('.product-card-new[data-item-index]');
+    
+    for (const card of cards) {
+        const index = parseInt(card.dataset.itemIndex);
+        const item = items[index];
+        if (!item) continue;
+        
+        const product = item.product || item;
+        const imgElement = card.querySelector('.color-image');
+        const placeholder = card.querySelector('.color-image-placeholder');
+        
+        if (!imgElement) continue;
+        
+        try {
+            const validUrl = await getValidColorImage(product);
+            
+            if (validUrl) {
+                imgElement.src = validUrl;
+                imgElement.style.display = '';
+                if (placeholder) placeholder.style.display = 'none';
+            } else {
+                imgElement.style.display = 'none';
+                if (placeholder) {
+                    placeholder.innerHTML = '<span class="text-gray-500">No preview</span>';
+                }
+            }
+        } catch (e) {
+            imgElement.style.display = 'none';
+            if (placeholder) {
+                placeholder.innerHTML = '<span class="text-gray-500">No preview</span>';
+            }
+        }
+    }
 }
 
 async function loadDesignPreviews() {
@@ -1223,8 +1369,10 @@ function showQCItemPopup(item, order) {
     const style = product.style || item.style || '';
     const color = product.color || item.color || '';
     const size = product.size || item.size || '';
-    const colorImage = product.color_image || item.color_image || '';
     const mockup = item.mockup || 'https://via.placeholder.com/300';
+    
+    // Store product for async color image loading
+    const productData = JSON.stringify(product).replace(/"/g, '&quot;');
     
     const popupHTML = `
         <div id="qc-popup" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
@@ -1258,15 +1406,12 @@ function showQCItemPopup(item, order) {
                     <!-- Row 1: Product Preview | Variant Details | Mockup -->
                     <div class="grid grid-cols-3 gap-6 mb-6">
                         <!-- Column 1: Product Preview -->
-                        <div class="flex flex-col items-center">
+                        <div class="flex flex-col items-center" id="popup-color-image-container" data-product="${productData}">
                             <h4 class="text-lg font-bold mb-3 text-gray-400">Product Preview</h4>
-                            ${colorImage ? `
-                                <img src="${colorImage}" alt="${color}" class="w-full max-w-72 h-72 rounded-xl object-cover border-4 border-gray-600">
-                            ` : `
-                                <div class="w-full max-w-72 h-72 rounded-xl bg-gray-800 flex items-center justify-center border-4 border-gray-600">
-                                    <span class="text-gray-500">No preview</span>
-                                </div>
-                            `}
+                            <img id="popup-color-image" class="w-full max-w-72 h-72 rounded-xl object-cover border-4 border-gray-600" style="display: none;" alt="${color}">
+                            <div id="popup-color-placeholder" class="w-full max-w-72 h-72 rounded-xl bg-gray-800 flex items-center justify-center border-4 border-gray-600">
+                                <div class="loading-spinner"></div>
+                            </div>
                         </div>
                         
                         <!-- Column 2: Variant Details -->
@@ -1274,11 +1419,11 @@ function showQCItemPopup(item, order) {
                             <h4 class="text-lg font-bold mb-3 text-gray-400">Variant Details</h4>
                             <h3 class="text-2xl font-bold mb-4">${productName}</h3>
                             
-                            <!-- Variant Info - BIG -->
+                            <!-- Variant Info - BIG with styled borders -->
                             <div class="flex flex-col gap-3">
-                                ${style ? `<span class="px-6 py-3 bg-purple-600 rounded-xl text-white font-bold text-xl text-center">📦 ${style}</span>` : ''}
-                                ${color ? `<span class="px-6 py-3 bg-blue-600 rounded-xl text-white font-bold text-xl text-center">🎨 ${color}</span>` : ''}
-                                ${size ? `<span class="px-6 py-3 bg-green-600 rounded-xl text-white font-bold text-xl text-center">📏 ${size}</span>` : ''}
+                                ${style ? `<span class="variant-badge variant-style px-6 py-3 rounded-xl text-white font-bold text-xl text-center border-2 border-purple-400 bg-purple-600/80 shadow-lg shadow-purple-500/30">📦 ${style}</span>` : ''}
+                                ${color ? `<span class="variant-badge variant-color px-6 py-3 rounded-xl text-white font-bold text-xl text-center border-2 border-blue-400 bg-blue-600/80 shadow-lg shadow-blue-500/30">🎨 ${color}</span>` : ''}
+                                ${size ? `<span class="variant-badge variant-size px-6 py-3 rounded-xl text-white font-bold text-xl text-center border-2 border-green-400 bg-green-600/80 shadow-lg shadow-green-500/30">📏 ${size}</span>` : ''}
                             </div>
                             
                             <div class="text-xl text-gray-400 mt-4">
@@ -1326,8 +1471,39 @@ function showQCItemPopup(item, order) {
     
     document.body.insertAdjacentHTML('beforeend', popupHTML);
     
+    // Load color image in popup (try multiple URLs)
+    loadPopupColorImage(product);
+    
     // Load design previews in popup
     loadPopupDesignPreviews();
+}
+
+// Load color image for popup, trying multiple URLs
+async function loadPopupColorImage(product) {
+    const imgElement = document.getElementById('popup-color-image');
+    const placeholder = document.getElementById('popup-color-placeholder');
+    
+    if (!imgElement) return;
+    
+    try {
+        const validUrl = await getValidColorImage(product);
+        
+        if (validUrl) {
+            imgElement.src = validUrl;
+            imgElement.style.display = '';
+            if (placeholder) placeholder.style.display = 'none';
+        } else {
+            imgElement.style.display = 'none';
+            if (placeholder) {
+                placeholder.innerHTML = '<span class="text-gray-500">No preview</span>';
+            }
+        }
+    } catch (e) {
+        imgElement.style.display = 'none';
+        if (placeholder) {
+            placeholder.innerHTML = '<span class="text-gray-500">No preview</span>';
+        }
+    }
 }
 
 // Load design preview images in popup
@@ -1647,28 +1823,35 @@ function displayOrderFromTrackData(order, items) {
         return;
     }
 
-    container.innerHTML = items.map(item => {
+    container.innerHTML = items.map((item, index) => {
         const product = item.product || {};
+        const productName = product.product_name || item.product_name || 'Unknown Product';
+        const style = product.style || item.style || '';
+        const color = product.color || item.color || '';
+        const size = product.size || item.size || '';
+        
         return `
-        <div class="product-card-new">
+        <div class="product-card-new" data-item-index="${index}">
             <!-- Left: Color Image -->
-            <div class="flex flex-col gap-3 items-center">
-                ${product.color_image ? `
-                    <img src="${product.color_image}" alt="${product.color}" 
-                         class="w-60 h-60 rounded-lg object-cover border-2 border-gray-600"
-                         onerror="this.style.display='none'">
-                ` : ''}
+            <div class="flex flex-col gap-3 items-center color-image-container">
+                <img class="color-image w-60 h-60 rounded-lg object-cover border-2 border-gray-600" 
+                     alt="${color}" 
+                     style="display: none;"
+                     onerror="this.style.display='none'">
+                <div class="color-image-placeholder w-60 h-60 rounded-lg bg-gray-800 flex items-center justify-center border-2 border-gray-600">
+                    <div class="loading-spinner-small"></div>
+                </div>
             </div>
             
             <!-- Middle: Product Info -->
             <div class="flex-1 flex flex-col gap-3">
-                <div class="text-lg font-bold text-white">${product.product_name || 'Unknown Product'}</div>
+                <div class="text-lg font-bold text-white">${productName}</div>
                 
-                <!-- Product variant info -->
+                <!-- Product variant info with styled borders -->
                 <div class="flex flex-wrap gap-3">
-                    ${product.style ? `<span class="px-4 py-2 bg-purple-600 rounded-lg text-white font-bold text-base">📦 ${product.style}</span>` : ''}
-                    ${product.color ? `<span class="px-4 py-2 bg-blue-600 rounded-lg text-white font-bold text-base">🎨 ${product.color}</span>` : ''}
-                    ${product.size ? `<span class="px-4 py-2 bg-green-600 rounded-lg text-white font-bold text-base">📏 ${product.size}</span>` : ''}
+                    ${style ? `<span class="variant-badge variant-style px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-purple-400 bg-purple-600/80">📦 ${style}</span>` : ''}
+                    ${color ? `<span class="variant-badge variant-color px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-blue-400 bg-blue-600/80">🎨 ${color}</span>` : ''}
+                    ${size ? `<span class="variant-badge variant-size px-4 py-2 rounded-lg text-white font-bold text-base border-2 border-green-400 bg-green-600/80">📏 ${size}</span>` : ''}
                 </div>
                 
                 <div class="flex gap-4 text-sm text-gray-400">
@@ -1684,7 +1867,7 @@ function displayOrderFromTrackData(order, items) {
             <!-- Middle: Mockup Image -->
             <div class="flex flex-col gap-3">
                 <img src="${item.mockup || 'https://via.placeholder.com/120'}" 
-                     alt="${product.product_name}" class="w-60 h-60 rounded-lg object-cover bg-gray-900"
+                     alt="${productName}" class="w-60 h-60 rounded-lg object-cover bg-gray-900"
                      onerror="this.src='https://via.placeholder.com/120?text=No+Image'">
             </div>
             
@@ -1713,6 +1896,9 @@ function displayOrderFromTrackData(order, items) {
             </div>
         </div>
     `}).join('');
+    
+    // Load color images async
+    loadColorImagesForItems(items);
     
     // Load design previews
     loadDesignPreviews();
