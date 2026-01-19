@@ -13,6 +13,10 @@ let selectedPrinter = null; // Selected printer for Shipout role
 let packingPendingItems = []; // Items scanned but not yet confirmed
 let packingOrderId = null;
 
+// Shipout mode state
+let shipoutPendingItems = []; // Items scanned but not yet processed
+let shipoutOrderId = null;
+
 // ===== Video Recording State =====
 let isRecording = false;
 let recordingOrderId = null;
@@ -2097,75 +2101,101 @@ async function refreshTrackData(orderId) {
     }
 }
 
-// Handle Shipout scan with track data - AUTO PRINT when scan
+// Handle Shipout scan with track data - WAIT FOR ALL ITEMS before print
 async function handleShipoutScanWithData(data, orderId, itemId) {
     console.log('=== handleShipoutScanWithData START ===');
     const order = data.order || { id: orderId };
     const items = data.items || [];
+    const totalItems = items.length || 1;
     
-    // Get role config for printing settings
-    const roleName = getRoleName(userRole);
-    const printingSettings = getPrintingSettings(roleName);
-    
-    // Get convert_label URL from order
-    const labelUrl = order.convert_label;
-    
-    // Pre-download label (already done in onQRScanned but double-check)
-    if (labelUrl && LABEL_CONFIG.preload.enabled) {
-        eel.preloadLabel(labelUrl)();
+    // If different order, reset pending items
+    if (shipoutOrderId !== null && shipoutOrderId !== orderId) {
+        if (shipoutPendingItems.length > 0 && shipoutPendingItems.length < totalItems) {
+            showToast(`⚠️ Bỏ order #${shipoutOrderId} (chưa scan đủ ${shipoutPendingItems.length} items)`, 'warning');
+        }
+        shipoutPendingItems = [];
+        shipoutOrderId = orderId;
+        updateShipoutPendingUI(null);
     }
     
-    console.log('Order:', order);
-    console.log('Label URL:', labelUrl);
-    console.log('Printer:', selectedPrinter);
-    console.log('Auto print enabled:', printingSettings.autoPrint);
+    if (shipoutOrderId === null) {
+        shipoutOrderId = orderId;
+    }
     
-    // ALWAYS display order details in main view first
+    // Find specific item
+    let item = null;
+    if (items && Array.isArray(items)) {
+        item = items.find(i => String(i.id) === String(itemId));
+    }
+    if (!item) {
+        item = items[0] || { id: itemId };
+    }
+    
+    // Add to pending if not already there
+    if (!shipoutPendingItems.find(i => i.itemId === itemId)) {
+        shipoutPendingItems.push({
+            orderId,
+            itemId,
+            item,
+            data,
+            scannedAt: new Date()
+        });
+        showToast(`🚚 Scan item ${shipoutPendingItems.length}/${totalItems}`, 'info');
+        
+        // Update pending UI
+        updateShipoutPendingUI(order, items, shipoutPendingItems);
+    } else {
+        showToast(`Item ${itemId} đã scan rồi`, 'warning');
+        return;
+    }
+    
+    // ALWAYS display order details in main view
     displayOrderFromTrackData(order, items);
     
     // Store current order data for manual print button
-    window.currentShipoutOrder = { order, items, labelUrl };
+    window.currentShipoutOrder = { order, items, labelUrl: order.convert_label };
     
-    // Show manual print button if enabled in config
-    if (LABEL_CONFIG.fallback.showManualButton) {
-        showShipoutActionButtons(order);
+    // Check if all items scanned - then print and activate
+    if (shipoutPendingItems.length >= totalItems) {
+        await autoActivateShipout(orderId, order, items);
+    } else {
+        showToast(`Còn ${totalItems - shipoutPendingItems.length} items chưa scan`, 'warning');
     }
-    
-    // Get saved printer from settings
-    const printerName = selectedPrinter || localStorage.getItem('selectedPrinter') || null;
-    
-    // Check if auto print is enabled
-    if (!printingSettings.autoPrint) {
-        console.log('Auto print disabled - use manual button');
-        showToast('📋 Đơn hàng đã load - Bấm Print Label để in', 'info');
-        return;
-    }
-    
-    if (!labelUrl) {
-        showToast('⚠️ Không tìm thấy label để in', 'warning');
-        return;
-    }
-    
-    if (!printerName) {
-        showToast('⚠️ Chưa chọn máy in trong Settings - Dùng nút Print thủ công', 'warning');
-        return;
-    }
-    
-    // AUTO PRINT - no popup needed
-    console.log('Starting AUTO PRINT...');
-    showToast('🖨️ Đang in label...', 'info');
-    
+}
+
+// Auto activate shipout when all items scanned
+async function autoActivateShipout(orderId, order, items) {
     try {
-        // Print label first
-        const printResult = await eel.printLabel(labelUrl, printerName)();
+        const labelUrl = order.convert_label;
+        const printerName = selectedPrinter || localStorage.getItem('selectedPrinter') || null;
         
-        if (printResult && printResult.success) {
-            showToast(`✅ Label đã gửi đến ${printerName}`, 'success');
+        // Get role config for printing settings
+        const roleName = getRoleName(userRole);
+        const printingSettings = getPrintingSettings(roleName);
+        
+        // Check if can auto print
+        const canAutoPrint = printingSettings.autoPrint && labelUrl && printerName;
+        
+        if (canAutoPrint) {
+            showToast('🖨️ Đang in label...', 'info');
+            
+            // Print label first
+            const printResult = await eel.printLabel(labelUrl, printerName)();
+            
+            if (printResult && printResult.success) {
+                showToast(`✅ Label đã gửi đến ${printerName}`, 'success');
+            } else {
+                showToast(`⚠️ Lỗi in: ${printResult?.message || 'Unknown'} - Dùng nút Print thủ công`, 'warning');
+            }
         } else {
-            showToast(`⚠️ Lỗi in: ${printResult?.message || 'Unknown'} - Dùng nút Print thủ công`, 'warning');
+            if (!labelUrl) {
+                showToast('⚠️ Không tìm thấy label để in', 'warning');
+            } else if (!printerName) {
+                showToast('⚠️ Chưa chọn máy in trong Settings', 'warning');
+            }
         }
         
-        // Then activate shipout for all items
+        // Activate shipout for all items
         showToast('🚚 Đang xử lý shipout...', 'info');
         
         const result = await eel.activateShipoutOrder(orderId, items)();
@@ -2175,6 +2205,13 @@ async function handleShipoutScanWithData(data, orderId, itemId) {
             const totalCount = result.results?.length || 0;
             showToast(`✅ Shipout hoàn thành (${successCount}/${totalCount} positions)`, 'success');
             
+            // Clear pending UI
+            updateShipoutPendingUI(null);
+            
+            // Reset state for next order
+            shipoutPendingItems = [];
+            shipoutOrderId = null;
+            
             // Refresh track data
             await refreshTrackData(orderId);
         } else {
@@ -2183,8 +2220,63 @@ async function handleShipoutScanWithData(data, orderId, itemId) {
         
     } catch (e) {
         console.error('Auto shipout error:', e);
-        showToast('Lỗi xử lý shipout - Dùng nút Print thủ công', 'error');
+        showToast('Lỗi xử lý shipout', 'error');
     }
+}
+
+// Update Shipout Pending UI with timeline
+function updateShipoutPendingUI(order, allItems, scannedItems) {
+    // Remove existing pending UI
+    const existingUI = document.getElementById('shipout-pending-ui');
+    if (existingUI) existingUI.remove();
+    
+    if (!order || !scannedItems || scannedItems.length === 0) return;
+    
+    const totalItems = allItems ? allItems.length : 1;
+    const scannedCount = scannedItems.length;
+    
+    // Create pending timeline UI
+    const pendingHTML = `
+        <div id="shipout-pending-ui" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 bg-dark-200 rounded-xl p-4 border-2 border-purple shadow-xl z-40">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🚚</span>
+                    <span class="font-bold text-lg">Shipout Order #${order.id}</span>
+                </div>
+                <span class="px-3 py-1 bg-purple rounded-lg text-white font-bold">
+                    ${scannedCount}/${totalItems}
+                </span>
+            </div>
+            <div class="text-sm text-gray-400 mb-2">Items đã scan:</div>
+            <div class="flex flex-wrap gap-2">
+                ${scannedItems.map((s, idx) => `
+                    <div class="flex items-center gap-2 bg-purple/20 border border-purple rounded-lg px-3 py-2">
+                        <span class="text-purple">✓</span>
+                        <span class="text-white font-medium">Item ${s.item?.stt || idx + 1}</span>
+                    </div>
+                `).join('')}
+                ${Array(totalItems - scannedCount).fill(0).map((_, idx) => `
+                    <div class="flex items-center gap-2 bg-gray-700 border border-gray-600 rounded-lg px-3 py-2">
+                        <span class="text-gray-500">○</span>
+                        <span class="text-gray-400">Chờ scan...</span>
+                    </div>
+                `).join('')}
+            </div>
+            <button onclick="cancelShipoutPending()" class="mt-3 w-full bg-gray-600 hover:bg-gray-500 py-2 rounded-lg text-sm">
+                Hủy
+            </button>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', pendingHTML);
+}
+
+// Cancel shipout pending
+function cancelShipoutPending() {
+    shipoutPendingItems = [];
+    shipoutOrderId = null;
+    updateShipoutPendingUI(null);
+    showToast('Đã hủy shipout', 'info');
 }
 
 // Show/hide Print Label button in header for Shipout role
