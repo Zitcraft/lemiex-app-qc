@@ -117,9 +117,10 @@ if errorlevel 1 (
 
 def create_role_launchers():
     """Create separate launchers for each role (multi-instance support)"""
+    # NOTE: Packing role is temporarily hidden
     roles = [
         ("QC", 8081, "#10B981"),
-        ("Packing", 8082, "#F59E0B"),
+        # ("Packing", 8082, "#F59E0B"),  # Hidden temporarily
         ("Shipout", 8083, "#3B82F6"),
     ]
     
@@ -159,6 +160,7 @@ if errorlevel 1 (
 
 def create_multi_instance_bat():
     """Create launcher to start multiple roles at once"""
+    # NOTE: Packing is temporarily hidden
     content = f'''@echo off
 title Lemiex Multi-Instance Launcher
 cd /d "%~dp0"
@@ -169,7 +171,6 @@ echo ==========================================
 echo.
 echo This will start multiple instances:
 echo   - QC (port 8081)
-echo   - Packing (port 8082)
 echo   - Shipout (port 8083)
 echo.
 echo Press any key to start all instances...
@@ -177,11 +178,6 @@ pause > nul
 
 echo Starting QC...
 start "Lemiex QC" Lemiex_QC.bat
-
-timeout /t 2 /nobreak > nul
-
-echo Starting Packing...
-start "Lemiex Packing" Lemiex_Packing.bat
 
 timeout /t 2 /nobreak > nul
 

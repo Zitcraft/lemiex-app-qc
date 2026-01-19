@@ -20,8 +20,22 @@ from datetime import datetime
 from typing import Optional
 import serial.tools.list_ports
 
+# Handle PyInstaller frozen mode
+def get_resource_path(relative_path: str) -> str:
+    """Get absolute path to resource, works for dev and for PyInstaller"""
+    if getattr(sys, 'frozen', False):
+        # Running as compiled EXE
+        base_path = Path(sys._MEIPASS)
+    else:
+        # Running as script
+        base_path = Path(__file__).parent
+    return str(base_path / relative_path)
+
 # Add project root to path
-project_root = Path(__file__).parent
+if getattr(sys, 'frozen', False):
+    project_root = Path(sys._MEIPASS)
+else:
+    project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 from config import get_settings
@@ -52,8 +66,9 @@ def setup_logging():
 setup_logging()
 logger = logging.getLogger(__name__)
 
-# Initialize Eel with web folder
-eel.init('web')
+# Initialize Eel with web folder (use correct path for frozen mode)
+web_folder = get_resource_path('web')
+eel.init(web_folder)
 
 
 class EelApp:

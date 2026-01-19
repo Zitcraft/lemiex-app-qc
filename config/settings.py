@@ -4,12 +4,43 @@ Loads from .env and config.yaml files.
 """
 
 import os
+import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from dataclasses import dataclass, field
 
 import yaml
 from dotenv import load_dotenv
+
+
+def get_app_data_path() -> Path:
+    """
+    Get the appropriate data storage path.
+    - When running as EXE (frozen): Use AppData/Local/LemiexQC
+    - When running as script: Use project directory
+    """
+    if getattr(sys, 'frozen', False):
+        # Running as compiled EXE (PyInstaller)
+        # Store data in user's AppData folder for persistence
+        app_data = Path(os.environ.get('LOCALAPPDATA', os.path.expanduser('~')))
+        data_path = app_data / 'LemiexQC'
+        data_path.mkdir(parents=True, exist_ok=True)
+        return data_path
+    else:
+        # Running as script - use project directory
+        return Path(__file__).parent.parent
+
+
+def get_executable_path() -> Path:
+    """
+    Get the path where the executable/script is located.
+    - When frozen: Directory containing the EXE
+    - When script: Project directory
+    """
+    if getattr(sys, 'frozen', False):
+        return Path(sys.executable).parent
+    else:
+        return Path(__file__).parent.parent
 
 
 @dataclass
@@ -70,21 +101,31 @@ class Settings:
     ui: UIConfig = field(default_factory=UIConfig)
     
     # Paths
-    base_path: Path = field(default_factory=Path)
+    base_path: Path = field(default_factory=Path)  # Data storage path
+    exe_path: Path = field(default_factory=Path)   # Executable/assets path
     
     @classmethod
     def load(cls, base_path: Optional[Path] = None) -> "Settings":
         """Load settings from .env and config.yaml files."""
-        if base_path is None:
-            base_path = Path(__file__).parent.parent
+        # Get paths based on frozen/script mode
+        data_path = get_app_data_path()       # For user data (auth, logs, etc.)
+        exe_path = get_executable_path()      # For bundled assets (web, config templates)
         
-        # Load .env file
-        env_path = base_path / ".env"
+        if base_path is None:
+            base_path = data_path
+        
+        # Load .env file (from exe path for bundled files)
+        env_path = exe_path / ".env"
         if env_path.exists():
             load_dotenv(env_path)
+        else:
+            # Also check data path (user might have custom .env)
+            env_path = data_path / ".env"
+            if env_path.exists():
+                load_dotenv(env_path)
         
-        # Load config.yaml
-        config_path = base_path / "config" / "config.yaml"
+        # Load config.yaml (from exe path for bundled files)
+        config_path = exe_path / "config" / "config.yaml"
         yaml_config = {}
         if config_path.exists():
             with open(config_path, "r", encoding="utf-8") as f:
@@ -145,12 +186,15 @@ class Settings:
             cameras=cameras,
             recording=recording,
             ui=ui,
-            base_path=base_path
+            base_path=base_path,
+            exe_path=exe_path
         )
     
     def save_yaml(self) -> None:
-        """Save current settings to config.yaml."""
-        config_path = self.base_path / "config" / "config.yaml"
+        """Save current settings to config.yaml in user data folder."""
+        config_dir = self.base_path / "config"
+        config_dir.mkdir(parents=True, exist_ok=True)
+        config_path = config_dir / "config.yaml"
         
         data = {
             "scanners": [
