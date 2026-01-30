@@ -1842,25 +1842,30 @@ function displayOrderFromTrackData(order, items) {
     console.log('displayOrderFromTrackData - order.total_quantity:', order.total_quantity, 'items.length:', items.length, 'calculated totalQuantity:', totalQuantity, 'orderType:', orderType);
 
     // Add Timeline and Order Type to header (like displayOrder)
-    const headerDiv = document.querySelector('#order-note-section')?.parentElement;
-    if (headerDiv) {
-        let timelineSection = document.getElementById('order-timeline-section');
-        if (!timelineSection) {
-            timelineSection = document.createElement('div');
-            timelineSection.id = 'order-timeline-section';
-            timelineSection.className = 'px-4 pt-2';
-            headerDiv.appendChild(timelineSection);
-        }
-        
+    // Look for the order header container or create timeline section
+    let timelineSection = document.getElementById('order-timeline-section');
+    const orderHeaderContainer = document.querySelector('#order-note-section')?.parentElement;
+    
+    if (!timelineSection && orderHeaderContainer) {
+        timelineSection = document.createElement('div');
+        timelineSection.id = 'order-timeline-section';
+        timelineSection.className = 'px-4 pt-2';
+        orderHeaderContainer.appendChild(timelineSection);
+    }
+    
+    if (timelineSection) {
         timelineSection.innerHTML = `
             <div class="flex items-center justify-between bg-dark-100 mx-0 px-4 py-3 rounded-lg">
                 <div class="flex items-center gap-4">
                     <span class="px-3 py-1 ${orderTypeClass} rounded-lg text-white font-bold">${orderType}</span>
-                    <span class="text-gray-400">${items.length} item(s)</span>
+                    <span class="text-gray-400">${items.length} item(s) | Total: ${totalQuantity}</span>
                 </div>
                 ${createTimelineHTML(order)}
             </div>
         `;
+        console.log('Timeline section updated with orderType:', orderType);
+    } else {
+        console.warn('Could not find or create timeline section');
     }
 
     // Items display
