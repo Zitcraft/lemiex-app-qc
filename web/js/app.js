@@ -712,10 +712,14 @@ function displayOrder(order) {
     // Order Status Dropdown
     updateOrderStatusDropdown(order.fulfill_status || order.order_stt || 'new_order');
     
-    // SINGLE/MULTI indicator
+    // SINGLE/MULTI indicator - use total_quantity or calculate from items
     const items = order.items || [];
-    const orderType = items.length > 1 ? 'ĐƠN NHIỀU ÁO' : 'ĐƠN LẺ';
-    const orderTypeClass = items.length > 1 ? 'bg-warning' : 'bg-success';
+    let totalQuantity = order.total_quantity;
+    if (!totalQuantity || totalQuantity < items.length) {
+        totalQuantity = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    }
+    const orderType = totalQuantity >= 2 ? 'ĐƠN NHIỀU ÁO' : 'ĐƠN LẺ';
+    const orderTypeClass = totalQuantity >= 2 ? 'bg-warning' : 'bg-success';
     
     // Add Timeline and Order Type to header
     const headerDiv = document.querySelector('#order-note-section').parentElement;
@@ -1675,13 +1679,24 @@ async function handleQCScanWithData(data, orderId, itemId) {
         // data format from track API: { order: {...}, items: [...], total_quantity: N }
         const order = data.order || { id: orderId };
         const items = data.items || [];
-        const totalQuantity = data.total_quantity || items.length;
+        
+        // Use total_quantity from API, but validate against items array
+        // Some API responses may have items with quantity > 1
+        let totalQuantity = data.total_quantity;
+        if (!totalQuantity || totalQuantity < items.length) {
+            // Calculate from items if API doesn't provide or is less than items count
+            totalQuantity = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        }
         
         // Add items and total_quantity to order for display
         order.items = items;
         order.total_quantity = totalQuantity;
         
-        console.log('Total quantity:', totalQuantity, 'Items:', items.length);
+        console.log('=== ORDER TYPE DEBUG ===');
+        console.log('data.total_quantity from API:', data.total_quantity);
+        console.log('items.length:', items.length);
+        console.log('Calculated totalQuantity:', totalQuantity);
+        console.log('Order type:', totalQuantity >= 2 ? 'ĐƠN NHIỀU ÁO' : 'ĐƠN LẺ');
         
         // Find the specific item by itemId
         let item = items.find(i => String(i.id) === String(itemId)) || items[0] || { id: itemId };
@@ -1815,9 +1830,38 @@ function displayOrderFromTrackData(order, items) {
     }
     
     // Determine SINGLE/MULTI using total_quantity
-    const totalQuantity = order.total_quantity || items.length;
+    // Use total_quantity from order, but validate against items array
+    let totalQuantity = order.total_quantity;
+    if (!totalQuantity || totalQuantity < items.length) {
+        // Calculate from items: sum of all quantities
+        totalQuantity = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    }
     const orderType = totalQuantity >= 2 ? 'ĐƠN NHIỀU ÁO' : 'ĐƠN LẺ';
     const orderTypeClass = totalQuantity >= 2 ? 'bg-warning' : 'bg-success';
+    
+    console.log('displayOrderFromTrackData - order.total_quantity:', order.total_quantity, 'items.length:', items.length, 'calculated totalQuantity:', totalQuantity, 'orderType:', orderType);
+
+    // Add Timeline and Order Type to header (like displayOrder)
+    const headerDiv = document.querySelector('#order-note-section')?.parentElement;
+    if (headerDiv) {
+        let timelineSection = document.getElementById('order-timeline-section');
+        if (!timelineSection) {
+            timelineSection = document.createElement('div');
+            timelineSection.id = 'order-timeline-section';
+            timelineSection.className = 'px-4 pt-2';
+            headerDiv.appendChild(timelineSection);
+        }
+        
+        timelineSection.innerHTML = `
+            <div class="flex items-center justify-between bg-dark-100 mx-0 px-4 py-3 rounded-lg">
+                <div class="flex items-center gap-4">
+                    <span class="px-3 py-1 ${orderTypeClass} rounded-lg text-white font-bold">${orderType}</span>
+                    <span class="text-gray-400">${items.length} item(s)</span>
+                </div>
+                ${createTimelineHTML(order)}
+            </div>
+        `;
+    }
 
     // Items display
     if (itemsCount) itemsCount.textContent = `(${items.length} items)`;
