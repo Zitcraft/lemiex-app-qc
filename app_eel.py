@@ -258,6 +258,38 @@ class EelApp:
             logger.error(f"Change fulfill status error: {e}")
             return {"success": False, "message": str(e)}
     
+    def get_fulfill_statuses(self):
+        """Get fulfill statuses from API"""
+        try:
+            import requests
+            
+            token = self.auth_manager.token
+            if not token:
+                return {"success": False, "message": "Chưa đăng nhập"}
+            
+            api_base = self.settings.api_base_url
+            url = f"{api_base}/orders/fulfill-statuses"
+            
+            headers = {
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json"
+            }
+            
+            response = requests.get(url, headers=headers, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                statuses = data.get("data", [])
+                logger.info(f"Loaded {len(statuses)} fulfill statuses")
+                return {"success": True, "data": statuses}
+            else:
+                logger.error(f"Failed to get fulfill statuses: {response.status_code}")
+                return {"success": False, "message": f"Lỗi: {response.status_code}"}
+                
+        except Exception as e:
+            logger.error(f"Get fulfill statuses error: {e}")
+            return {"success": False, "message": str(e)}
+    
     def activate_qc_item(self, order_id: int, item_id: int, positions: list = None):
         """Activate QC status for an item via API - activate all positions"""
         try:
@@ -1608,6 +1640,10 @@ def changeOrderStatus(order_id: str, new_status: str):
 @eel.expose
 def changeFulfillStatus(order_id: int, new_status: str):
     return app.change_fulfill_status(order_id, new_status)
+
+@eel.expose
+def getFulfillStatuses():
+    return app.get_fulfill_statuses()
 
 @eel.expose
 def activateQCItem(order_id: int, item_id: int, positions: list = None):

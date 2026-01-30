@@ -23,8 +23,8 @@ ROLES = [
     ("Shipout", 8083, "blue"),
 ]
 
-# Icon paths (create if needed)
-ICON_PATH = Path("web/images/icon.ico")
+# Icon path - use logo folder
+ICON_PATH = Path("logo/lemiex.ico")
 
 # Data files to include
 DATA_FILES = [

@@ -4,10 +4,14 @@ let currentUser = null;
 let userRole = null; // 'QC', 'Packing', 'Shipout', 'Admin', etc.
 let isLoggedIn = false;
 let cameraEnabled = true;
+let isCameraConnected = false; // Track camera connection status
 let recordingLimit = 300; // Default 5 minutes
 let autoRecordEnabled = true;
 let selectedCameraIndex = 0;
 let selectedPrinter = null; // Selected printer for Shipout role
+
+// Fulfill statuses cache (loaded from API)
+let fulfillStatuses = [];
 
 // Packing mode state
 let packingPendingItems = []; // Items scanned but not yet confirmed
@@ -136,6 +140,9 @@ function onLoginSuccess(userData) {
     // Update UI based on role
     updateUIForRole(userRole);
     
+    // Load fulfill statuses from API
+    loadFulfillStatuses();
+    
     showToast(`Đăng nhập thành công! Role: ${userRole}`, 'success');
 }
 
@@ -219,6 +226,10 @@ function onCameraStatusChanged(isActive) {
     const statusIndicator = document.getElementById('camera-status-indicator');
     const statusText = document.getElementById('camera-status-text');
     
+    // Update global camera connection state
+    isCameraConnected = isActive;
+    cameraEnabled = isActive;
+    
     toggle.checked = isActive;
     dotEl.textContent = isActive ? '🟢' : '⚫';
     statusIndicator.textContent = isActive ? '🟢' : '⚫';
@@ -226,6 +237,10 @@ function onCameraStatusChanged(isActive) {
     
     // Update footer status
     updateFooterDeviceStatus('camera', isActive);
+    
+    if (!isActive) {
+        console.log('Camera disconnected - recording disabled');
+    }
 }
 
 eel.expose(onCameraError);
@@ -404,6 +419,64 @@ function onStatusChanged(orderId, newStatus, success) {
         }
     } else {
         showToast('Không thể cập nhật trạng thái', 'error');
+    }
+}
+
+// Load fulfill statuses from API and populate dropdown
+async function loadFulfillStatuses() {
+    try {
+        const result = await eel.getFulfillStatuses()();
+        if (result && result.success && result.data) {
+            fulfillStatuses = result.data;
+            populateStatusDropdown(fulfillStatuses);
+            console.log('Loaded fulfill statuses:', fulfillStatuses.length);
+        }
+    } catch (e) {
+        console.error('Failed to load fulfill statuses:', e);
+    }
+}
+
+// Populate status dropdown with loaded statuses
+function populateStatusDropdown(statuses) {
+    const select = document.getElementById('order-status-select');
+    if (!select) return;
+    
+    // Status emoji mapping
+    const statusEmojis = {
+        'new_order': '🆕',
+        'producing': '🔧',
+        'qc_pass': '✅',
+        'packed': '📦',
+        'confirm': '✔️',
+        'pending_stock': '⏳',
+        'on_hold': '⏸️',
+        'shipped': '🚚',
+        'return_to_support': '↩️',
+        'cancelled': '❌',
+        'cancelled_refund_shipping': '💸',
+        'in_stock': '📋',
+        'closed': '🔒',
+        'test_order': '🧪',
+        'delivered': '✅'
+    };
+    
+    // Keep current value
+    const currentValue = select.value;
+    
+    // Clear and rebuild
+    select.innerHTML = '<option value="">-- Trạng thái --</option>';
+    
+    statuses.forEach(status => {
+        const option = document.createElement('option');
+        option.value = status.value;
+        const emoji = statusEmojis[status.value] || '📋';
+        option.textContent = `${emoji} ${status.label}`;
+        select.appendChild(option);
+    });
+    
+    // Restore value if valid
+    if (currentValue) {
+        select.value = currentValue;
     }
 }
 
@@ -925,13 +998,19 @@ function updateOrderStatusDropdown(status) {
     // Normalize status first
     const normalizedStatus = normalizeStatus(status);
     
-    // Valid statuses for the dropdown
-    const validStatuses = ['new_order', 'producing', 'shipped', 'return_to_support', 'cancelled', 'delivered'];
+    // Get valid statuses from loaded fulfillStatuses, or use defaults
+    let validStatuses = fulfillStatuses.map(s => s.value);
+    if (validStatuses.length === 0) {
+        // Fallback to default statuses if not loaded yet
+        validStatuses = ['new_order', 'producing', 'qc_pass', 'packed', 'confirm', 'pending_stock', 
+                         'on_hold', 'shipped', 'return_to_support', 'cancelled', 'in_stock', 'closed'];
+    }
     
     if (validStatuses.includes(normalizedStatus)) {
         select.value = normalizedStatus;
     } else {
-        select.value = '';
+        // Try to find exact match or set empty
+        select.value = status || '';
     }
     
     // Update dropdown color based on status
@@ -1292,6 +1371,13 @@ function createItemTimelineSmall(item) {
 async function startVideoRecording(orderId, itemId) {
     if (isRecording) {
         console.log('Already recording, skip startVideoRecording');
+        return;
+    }
+    
+    // Check if camera is connected before trying to record
+    if (!isCameraConnected) {
+        console.log('Camera not connected - skipping recording');
+        showToast('⚠️ Camera chưa kết nối - không thể ghi hình', 'warning');
         return;
     }
     
