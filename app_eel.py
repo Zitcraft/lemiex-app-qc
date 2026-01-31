@@ -949,6 +949,27 @@ $doc.Print(); $image.Dispose(); "OK"
         """Restart camera completely for new websocket connection (after F5 refresh)"""
         logger.info("Restarting camera for new connection...")
         
+        # First check if any cameras are available
+        try:
+            from camera import Camera
+            available_cameras = Camera.list_available_cameras()
+            if not available_cameras:
+                logger.warning("No cameras available - skipping restart")
+                self._camera_active = False
+                try:
+                    eel.onCameraStatusChanged(False)
+                except:
+                    pass
+                return
+        except Exception as e:
+            logger.error(f"Error checking cameras: {e}")
+            self._camera_active = False
+            try:
+                eel.onCameraStatusChanged(False)
+            except:
+                pass
+            return
+        
         # Stop everything
         self._camera_active = False
         if self._camera_thread:
@@ -964,17 +985,27 @@ $doc.Print(); $image.Dispose(); "OK"
         self._camera_active = True
         self.camera_manager.start()
         
-        # Start new stream thread
-        self._camera_thread = threading.Thread(target=self._stream_camera_frames)
-        self._camera_thread.daemon = True
-        self._camera_thread.start()
-        
-        # Notify frontend
-        try:
-            eel.onCameraStatusChanged(True)
-        except:
-            pass
-        logger.info("Camera fully restarted for new connection")
+        # Check if camera actually working
+        camera = self.camera_manager.get_primary_camera()
+        if camera and camera.get_frame() is not None:
+            # Start new stream thread
+            self._camera_thread = threading.Thread(target=self._stream_camera_frames)
+            self._camera_thread.daemon = True
+            self._camera_thread.start()
+            
+            # Notify frontend - connected
+            try:
+                eel.onCameraStatusChanged(True)
+            except:
+                pass
+            logger.info("Camera fully restarted for new connection")
+        else:
+            self._camera_active = False
+            logger.warning("Camera restart failed - no frames")
+            try:
+                eel.onCameraStatusChanged(False)
+            except:
+                pass
     
     def toggle_camera(self, enabled: bool):
         """Toggle camera on/off"""
@@ -1090,6 +1121,25 @@ $doc.Print(); $image.Dispose(); "OK"
         if self._camera_active:
             return
         
+        # First check if any cameras are available
+        try:
+            from camera import Camera
+            available_cameras = Camera.list_available_cameras()
+            if not available_cameras:
+                logger.warning("No cameras available - cannot start camera")
+                try:
+                    eel.onCameraStatusChanged(False)
+                except:
+                    pass
+                return
+        except Exception as e:
+            logger.error(f"Error checking cameras: {e}")
+            try:
+                eel.onCameraStatusChanged(False)
+            except:
+                pass
+            return
+        
         self._camera_active = True
         
         # Initialize camera with selected index
@@ -1113,16 +1163,29 @@ $doc.Print(); $image.Dispose(); "OK"
         
         self.camera_manager.start()
         
-        # Start frame streaming thread
-        self._camera_thread = threading.Thread(target=self._stream_camera_frames)
-        self._camera_thread.daemon = True
-        self._camera_thread.start()
-        
-        # Notify frontend
-        try:
-            eel.onCameraStatusChanged(True)
-        except:
-            pass
+        # Check if camera actually connected
+        camera = self.camera_manager.get_primary_camera()
+        if camera and camera.get_frame() is not None:
+            # Camera is working
+            # Start frame streaming thread
+            self._camera_thread = threading.Thread(target=self._stream_camera_frames)
+            self._camera_thread.daemon = True
+            self._camera_thread.start()
+            
+            # Notify frontend - camera connected
+            try:
+                eel.onCameraStatusChanged(True)
+            except:
+                pass
+            logger.info(f"Camera {camera_id} started successfully")
+        else:
+            # Camera failed to start
+            self._camera_active = False
+            logger.warning(f"Camera {camera_id} failed to get frames")
+            try:
+                eel.onCameraStatusChanged(False)
+            except:
+                pass
     
     def _stop_camera(self):
         """Stop camera"""

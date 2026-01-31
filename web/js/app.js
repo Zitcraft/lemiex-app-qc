@@ -255,6 +255,23 @@ function onCamerasLoaded(cameras) {
     
     if (cameras.length === 0) {
         select.innerHTML = '<option value="0">Không tìm thấy camera</option>';
+        // No cameras found - disable recording
+        isCameraConnected = false;
+        cameraEnabled = false;
+        
+        // Update UI to show camera is not available
+        const toggle = document.getElementById('camera-toggle');
+        const dotEl = document.getElementById('camera-status-dot');
+        const statusIndicator = document.getElementById('camera-status-indicator');
+        const statusText = document.getElementById('camera-status-text');
+        
+        if (toggle) toggle.checked = false;
+        if (dotEl) dotEl.textContent = '🔴';
+        if (statusIndicator) statusIndicator.textContent = '🔴';
+        if (statusText) statusText.textContent = 'Không có camera';
+        
+        updateFooterDeviceStatus('camera', false);
+        console.log('No cameras found - recording disabled');
         return;
     }
     
